@@ -52,3 +52,28 @@ function changeHamburgerColor() {
 }
 window.addEventListener('scroll', changeHamburgerColor);
 // ここまでハンバーガーメニューの色変更----------------------------------------------------------
+
+
+
+
+// ここからスクロールボタンのフェードイン・フェードイン---------------------------------
+function hiddenScrollButton() {
+  var trigger = document.getElementById('js-scrollDown__fadeout');
+  var scrollButton = document.getElementById('scrolldown-button');
+
+  if (!scrollButton || !trigger) return;
+
+  var triggerClientRect = trigger.getBoundingClientRect();
+  // ターゲット要素の位置を、ブラウザ表示領域の左上を(0,0)として、そこからの相対位置で示す
+  if (triggerClientRect.top < 0) {
+    scrollButton.classList.remove('scrollFadein');
+    scrollButton.classList.add('scrollFadeout');
+  } else {
+    if (scrollButton.classList.contains('scrollFadeout')) {
+      scrollButton.classList.remove('scrollFadeout');
+      scrollButton.classList.add('scrollFadein');
+    }
+  }
+}
+window.addEventListener('scroll', hiddenScrollButton);
+// ここまでスクロールボタンのフェードイン・フェードイン---------------------------------
