@@ -3,6 +3,7 @@ body {
   font-family: 'Noto Sans JP', sans-serif;
   color: #333333;
   height: 9000px;
+  scroll-behavior: smooth;
 }
 
 @media screen and (max-width: 767px) {
@@ -133,7 +134,7 @@ body {
 
 .header__scrolldown-button {
   position: absolute;
-  bottom: 250px;
+  bottom: 90px;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   z-index: 2;
@@ -205,6 +206,70 @@ body {
   visibility: visible;
 }
 
+.header__global-nav {
+  background-color: rgba(202, 140, 220, 0.15);
+  width: 100%;
+  padding: 25px;
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+  margin-left: auto;
+}
+
+.header__global-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.header__global-nav ul li {
+  font-size: 17px;
+  font-weight: 300;
+  margin: 0 20px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.header__global-nav ul li:hover {
+  color: #666;
+}
+
+@media screen and (max-width: 767px) {
+  .header__global-nav {
+    display: none;
+  }
+}
+
+.header__global-nav.is-fixed-nav {
+  position: fixed;
+  width: 450px;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  background-color: transparent;
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+}
+
+.header__global-nav.is-fixed-nav a {
+  color: #333;
+}
+
+.header__global-nav.is-fixed-nav li {
+  font-size: 15px;
+  margin: 0 13px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.header__global-nav.is-fixed-nav li:hover {
+  color: #666;
+}
+
 .header {
   text-align: center;
   width: 100%;
@@ -217,7 +282,7 @@ body {
 .header__site-logo {
   width: 840px;
   height: auto;
-  margin-top: 350px;
+  margin: 350px 0 80px;
   -webkit-filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.16));
           filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.16));
 }

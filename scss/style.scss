@@ -2,6 +2,7 @@
 @import "basic";
 @import "hamburger";
 @import "scrolldown";
+@import "globalnav";
 
 
 .header {
@@ -16,7 +17,7 @@
 .header__site-logo {
   width: 840px;
   height: auto;
-  margin-top: 350px;
+  margin: 350px 0 80px;
   filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, .16));
 
   @include mq(sp) {

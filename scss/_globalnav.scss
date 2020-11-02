@@ -1,0 +1,53 @@
+.header__global-nav {
+  background-color: rgba($moduleColor, 0.15);
+  width: 100%;
+  padding: 25px;
+  transition: 1.2s;
+  // 下から上に戻ってきたときのクラス名の変化時にもふわっとさせるため、この場所にも指定が必要
+  margin-left: auto;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    transition: all .3s;
+
+    li {
+      font-size: 17px;
+      font-weight: 300;
+      margin: 0 20px;
+      transition: all .3s;
+
+      &:hover {
+        color: #666;
+      }
+    }
+  }
+
+  @include mq(sp) {
+    display: none;
+  }
+}
+
+.header__global-nav.is-fixed-nav {
+  position: fixed;
+  width: 450px;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  background-color: transparent;
+  transition: 1.2s;
+
+  a {
+    color: #333;
+  }
+
+  li {
+    font-size: 15px;
+    margin: 0 13px;
+    transition: all .3s;
+
+    &:hover {
+      color: #666;
+    }
+  }
+}

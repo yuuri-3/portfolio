@@ -77,3 +77,25 @@ function hiddenScrollButton() {
 }
 window.addEventListener('scroll', hiddenScrollButton);
 // ここまでスクロールボタンのフェードイン・フェードイン---------------------------------
+
+
+
+// ここからスクロールに合わせてナビゲーションバー固定の切り替え---------------------------
+function fixedGlobalNav() {
+  var trigger = document.getElementById('js-trigger');
+  var globalNav = document.getElementById('js-global-nav');
+
+  if (!globalNav || !trigger) return;
+
+  var triggerClientRect = trigger.getBoundingClientRect();
+  // ターゲット要素の位置を、ブラウザ表示領域の左上を(0,0)として、そこからの相対位置で示す
+
+  if (triggerClientRect.top < 0) {
+    globalNav.classList.add('is-fixed-nav');
+  } else {
+    globalNav.classList.remove('is-fixed-nav');
+  }
+}
+window.addEventListener('scroll', fixedGlobalNav);
+// これで作ったfixedGlobalNav()という関数をscrollに合わせて実行する
+// ここまでスクロールに合わせてナビゲーションバー固定の切り替え---------------------------
