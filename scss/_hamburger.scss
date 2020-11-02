@@ -7,21 +7,6 @@
     right: 25px;
     top: 30px;
     z-index: 101;
-  }
-}
-
-.hamburgerMenu-navParent {
-  display: none;
-
-  @include mq('sp') {
-    display: block;
-  }
-}
-
-// レスポンシブ対応時のみ必要になるクラス名　ここから↓　--------------------
-@include mq('sp') {
-
-  .hamburger__button {
 
     a,
     span {
@@ -81,22 +66,15 @@
         background-color: #E5DBE4;
       }
     }
+
   }
+}
 
-  .hamburger__fadeout-layer {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0;
-    bottom: 0;
-    background-color: #000000;
-    display: none;
-    opacity: 0.5;
-    z-index: 100;
-  }
+.hamburger__container {
+  display: none;
 
-
-  .hamburger__container {
+  @include mq('sp') {
+    display: block;
     position: fixed;
     z-index: 100;
     right: -100%;
@@ -122,6 +100,22 @@
       color: #222;
       transition: 0.2s;
     }
+  }
+}
+
+// レスポンシブ対応時のみ必要になるクラス名　ここから↓　--------------------
+@include mq('sp') {
+
+  .hamburger__fadeout-layer {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    display: none;
+    opacity: 0.5;
+    z-index: 100;
   }
 
   .hamburger__item {
