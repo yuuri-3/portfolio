@@ -4,13 +4,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/destyle.css">
-  <link rel="stylesheet" href="css/destyle.css">
   <title>Nothing comes of nothing.</title>
+  <!-- Google fonts, Swiperのstylesheet, Fontawesomeの読み込み　↓ここから -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <script src="https://kit.fontawesome.com/30c228dbe0.js" crossorigin="anonymous"></script>
+  <!-- Google fonts, Swiperのライブラリ, Fontawesomeの読み込み　↑ここまで -->
+  <link rel="stylesheet" href="css/destyle.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <h1>あいうえお</h1>
+  <header class="header">
+
+    <!-- ↓ここから　ハンバーガーメニュー関連 -->
+    <header class="header" id="js-hamburger__colorChange">
+      <div class="hamburger__button" id="hamburger__button">
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <div class="hamburger__fadeout-layer"></div>
+      <div class="hamburger__container">
+        <ul>
+          <li class="hamburger__item GreetingLink"><a href="#profile">Greeting</a></li>
+          <li class="hamburger__item profileLink"><a href="#profile">About</a></li>
+          <li class="hamburger__item skillsLink"><a href="#skills">Skills</a></li>
+          <li class="hamburger__item worksLink"><a href="#works">Works</a></li>
+          <li class="hamburger__item contactLink"><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <!-- ↑ここまで　ハンバーガーメニュー関連 -->
+
+      <h1 class="site-title" id="scroll-trigger">Nothing comes<br>of nothing.</h1>
+      <div class="scrolldown-button" id="scrolldown-button">
+        SCROLL
+      </div>
+
+
+
+      <!-- JS, jQuery 関係の読み込み　↓ここから -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+      <!-- <script src="js/jquery-2.1.4.min.js"></script> -->
+      <!-- ↑↑skillbarの公式ページが推奨してたVersion（別で自分で読み込んでたものでも動いたのでコメントアウトで保留） -->
+      <script src="./js/skill.bars.jquery.js"></script>
+      <script src="./js/index.js"></script>
+      <!-- JS, jQuery 関係の読み込み　↑ここまで -->
 </body>
 
 </html>
