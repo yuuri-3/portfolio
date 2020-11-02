@@ -2,6 +2,7 @@ body {
   font-size: 15px;
   font-family: 'Noto Sans JP', sans-serif;
   color: #333333;
+  height: 9000px;
 
   @include mq('sp') {
     font-size: 13px;

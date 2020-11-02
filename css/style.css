@@ -2,6 +2,7 @@ body {
   font-size: 15px;
   font-family: 'Noto Sans JP', sans-serif;
   color: #333333;
+  height: 9000px;
 }
 
 @media screen and (max-width: 767px) {
@@ -130,12 +131,87 @@ body {
   }
 }
 
+.header__scrolldown-button {
+  position: absolute;
+  bottom: 250px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  z-index: 2;
+  display: inline-block;
+  text-decoration: none;
+  padding-top: 60px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header__scrolldown-button span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-animation: sdb 2s infinite;
+          animation: sdb 2s infinite;
+}
+
+@media screen and (max-width: 767px) {
+  .header__scrolldown-button {
+    bottom: 60px;
+  }
+}
+
+@-webkit-keyframes sdb {
+  0% {
+    -webkit-transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+            transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+  }
+  50% {
+    -webkit-transform: rotateY(3.142rad) rotateZ(-45deg) translate(-10px, 10px);
+            transform: rotateY(3.142rad) rotateZ(-45deg) translate(-10px, 10px);
+  }
+  100% {
+    -webkit-transform: rotateY(720deg) rotateZ(-45deg) translate(0, 0);
+            transform: rotateY(720deg) rotateZ(-45deg) translate(0, 0);
+  }
+}
+
+@keyframes sdb {
+  0% {
+    -webkit-transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+            transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+  }
+  50% {
+    -webkit-transform: rotateY(3.142rad) rotateZ(-45deg) translate(-10px, 10px);
+            transform: rotateY(3.142rad) rotateZ(-45deg) translate(-10px, 10px);
+  }
+  100% {
+    -webkit-transform: rotateY(720deg) rotateZ(-45deg) translate(0, 0);
+            transform: rotateY(720deg) rotateZ(-45deg) translate(0, 0);
+  }
+}
+
+.header__scrolldown__fadeout {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header__scrolldown__fadein {
+  opacity: 1;
+  visibility: visible;
+}
+
 .header {
   text-align: center;
   width: 100%;
   height: 100vh;
   background: url("../img/bg.jpg") no-repeat left bottom;
   background-size: cover;
+  color: #fff;
 }
 
 .header__site-logo {

@@ -66,12 +66,12 @@ function hiddenScrollButton() {
   var triggerClientRect = trigger.getBoundingClientRect();
   // ターゲット要素の位置を、ブラウザ表示領域の左上を(0,0)として、そこからの相対位置で示す
   if (triggerClientRect.top < 0) {
-    scrollButton.classList.remove('scrollFadein');
-    scrollButton.classList.add('scrollFadeout');
+    scrollButton.classList.remove('header__scrolldown__fadein');
+    scrollButton.classList.add('header__scrolldown__fadeout');
   } else {
-    if (scrollButton.classList.contains('scrollFadeout')) {
-      scrollButton.classList.remove('scrollFadeout');
-      scrollButton.classList.add('scrollFadein');
+    if (scrollButton.classList.contains('header__scrolldown__fadeout')) {
+      scrollButton.classList.remove('header__scrolldown__fadeout');
+      scrollButton.classList.add('header__scrolldown__fadein');
     }
   }
 }
