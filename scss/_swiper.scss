@@ -22,7 +22,7 @@
   object-fit: cover;
   transition: .2s ease-in-out;
   border-radius: 10px;
-  box-shadow: 1px 8px 15px -7px rgba(0, 0, 0, 0.3);
+  box-shadow: $boxShadow;
 }
 
 /* .carousel-image:hover {

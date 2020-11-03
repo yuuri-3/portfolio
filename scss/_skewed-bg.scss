@@ -20,3 +20,20 @@
   position: relative;
   z-index: 1;
 }
+
+.skewed-bg__white {
+  position: relative;
+  overflow: hidden;
+  padding-top: 15vw;
+  margin-top: -15vw;
+
+  // 三角を作ろうとすると、横にもはみ出て横スクロールが出てしまうが、そのままoverflow：hidden;にすると上の三角も消えてしまうので、マージンで上に押し上げて三角が入るまで領域を広げ、paddingでコンテンツを元の高さに戻している
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0vw;
+    left: 0;
+    border-bottom: 15vw solid #fff;
+    border-left: 100vw solid transparent;
+  }
+}
