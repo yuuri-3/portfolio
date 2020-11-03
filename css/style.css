@@ -213,8 +213,8 @@ body {
   background-color: rgba(202, 140, 220, 0.15);
   width: 100%;
   padding: 25px;
-  -webkit-transition: 1.2s;
-  transition: 1.2s;
+  -webkit-transition: .8s;
+  transition: .8s;
   margin-left: auto;
 }
 
@@ -254,8 +254,8 @@ body {
   right: 0;
   z-index: 10;
   background-color: transparent;
-  -webkit-transition: 1.2s;
-  transition: 1.2s;
+  -webkit-transition: .8s;
+  transition: .8s;
 }
 
 .header__global-nav.is-fixed-nav a {
@@ -274,11 +274,11 @@ body {
 }
 
 .skewed-bg {
-  padding-bottom: calc(10vw + 10px);
   position: relative;
   overflow: hidden;
   background-color: #f5e7ee;
   margin-top: 100px;
+  padding-bottom: 60px;
 }
 
 .skewed-bg::before {
@@ -290,6 +290,35 @@ body {
   border-right: 100vw solid transparent;
 }
 
+.swiper-custom-parent {
+  margin-left: auto;
+  position: relative;
+}
+
+.swiper-container {
+  overflow: visible;
+}
+
+.swiper-slide {
+  width: 550px;
+  height: 340px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 8px 15px -7px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 8px 15px -7px rgba(0, 0, 0, 0.3);
+}
+
+/* .carousel-image:hover {
+  transform: scale(1.2);
+} */
 .header {
   text-align: center;
   width: 100%;

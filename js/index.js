@@ -99,3 +99,39 @@ function fixedGlobalNav() {
 window.addEventListener('scroll', fixedGlobalNav);
 // これで作ったfixedGlobalNav()という関数をscrollに合わせて実行する
 // ここまでスクロールに合わせてナビゲーションバー固定の切り替え---------------------------
+
+
+// ここからSwiperの設定-------------------------------
+document.addEventListener('DOMContentLoaded', function () {
+  var mql = window.matchMedia('screen and (min-width: 769px)');
+  var prams = {
+    loop: false,
+    speed: 1200,
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    grabCursor: true,
+    centeredSlides: false,
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   clickable: true,
+    // },
+  };
+  var mySwiper = new Swiper('.swiper-container', prams);
+
+  function slider(mql) {
+    if (mql.matches) {
+      prams.slidesPerGroup = 1;
+      prams.slidesPerView = 'auto';
+    } else {
+      prams.slidesPerGroup = 1;
+      prams.slidesPerView = 1;
+    }
+    mySwiper.destroy(true, true);
+    mySwiper = new Swiper('.swiper-container', prams);
+  }
+
+  mql.addListener(slider);
+  slider(mql);
+});
+// ここまでSwiperの設定-------------------------------

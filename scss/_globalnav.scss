@@ -2,7 +2,7 @@
   background-color: rgba($moduleColor, 0.15);
   width: 100%;
   padding: 25px;
-  transition: 1.2s;
+  transition: .8s;
   // 下から上に戻ってきたときのクラス名の変化時にもふわっとさせるため、この場所にも指定が必要
   margin-left: auto;
 
@@ -35,7 +35,7 @@
   right: 0;
   z-index: 10;
   background-color: transparent;
-  transition: 1.2s;
+  transition: .8s;
 
   a {
     color: #333;

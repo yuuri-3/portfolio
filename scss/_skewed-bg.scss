@@ -1,9 +1,9 @@
 .skewed-bg {
-  padding-bottom: calc(10vw + 10px);
   position: relative;
   overflow: hidden;
   background-color: $bgColor;
   margin-top: 100px;
+  padding-bottom: 60px;
 
   &::before {
     content: '';
