@@ -507,4 +507,105 @@ body {
   color: #BF5858;
   font-weight: 900;
 }
+
+.personality {
+  text-align: left;
+}
+
+.personality__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 1200px;
+  width: 90%;
+  margin: -30px auto 0;
+}
+
+@media screen and (max-width: 767px) {
+  .personality__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+}
+
+.personality__box {
+  width: 33%;
+  max-width: 330px;
+  position: relative;
+  margin: 0 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .personality__box {
+    width: 90%;
+    position: relative;
+    margin: 0 auto 50px;
+  }
+}
+
+.personality__icon {
+  margin: 0 auto 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.personality__icon img {
+  width: 130px;
+  height: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .personality__icon {
+    font-size: 4rem;
+    padding: 23px;
+    margin-bottom: 25px;
+  }
+}
+
+.js-slide-first {
+  opacity: 0;
+  -webkit-transform: translate(0, 50px);
+          transform: translate(0, 50px);
+  -webkit-transition: all .7s .3s ease-out;
+  transition: all .7s .3s ease-out;
+  margin-top: 120px;
+}
+
+.js-slide-second {
+  opacity: 0;
+  -webkit-transform: translate(0, 50px);
+          transform: translate(0, 50px);
+  -webkit-transition: all .7s .5s ease-out;
+  transition: all .7s .5s ease-out;
+  margin-top: 60px;
+}
+
+.js-slide-third {
+  opacity: 0;
+  -webkit-transform: translate(0, 50px);
+          transform: translate(0, 50px);
+  -webkit-transition: all .7s .7s ease-out;
+  transition: all .7s .7s ease-out;
+}
+
+.personality__title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
 /*# sourceMappingURL=style.css.map */

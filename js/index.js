@@ -135,3 +135,17 @@ document.addEventListener('DOMContentLoaded', function () {
   slider(mql);
 });
 // ここまでSwiperの設定-------------------------------
+
+
+// ここからPersonalityのアイコンフェードイン-------------------------------
+$(window).on('load scroll', function () {
+  $(".personality__box").each(function () {
+    var winScroll = $(window).scrollTop();
+    var winHeight = $(window).height();
+    var scrollPos = winScroll + (winHeight * 0.8);
+    if ($(this).offset().top < scrollPos) {
+      $(this).css({ opacity: 1, transform: 'translate(0, 0)' });
+    }
+  });
+});
+// ここまでPersonalityのアイコンフェードイン-------------------------------
