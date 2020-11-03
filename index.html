@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nothing comes of nothing.</title>
   <!-- Google fonts, Swiperのstylesheet, Fontawesomeの読み込み　↓ここから -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Noto+Sans+JP:wght@300;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
   <script src="https://kit.fontawesome.com/30c228dbe0.js" crossorigin="anonymous"></script>
   <!-- Google fonts, Swiperのライブラリ, Fontawesomeの読み込み　↑ここまで -->
@@ -45,7 +46,7 @@
     <div id="js-trigger">
       <nav class="header__global-nav" id="js-global-nav">
         <ul>
-          <li><a href="#profile">Greeting</a></li>
+          <li><a href="#greeting">Greeting</a></li>
           <li><a href="#personality">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#works">Works</a></li>
@@ -56,16 +57,83 @@
     <!-- ここまで↑　グローバルナビ関連 -->
 
     <a class="header__scrolldown-button" href="#Greeting" id="scrolldown-button"><span></span>Scroll</a>
+  </header>
 
+  <section class="ly-inner greeting" id="greeting">
+    <h2 class="headding">Hello, I'm Yuuri :)</h2>
+    <div class="greeting__message">
+      <span style="font-size: 13px;">こんにちは！</span>
+      <span class="sub-headding sub-headding__greeting">＼　WEBデザイナーを目指している、ゆうりと申します　／</span>
 
-    <!-- JS, jQuery 関係の読み込み　↓ここから -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <!-- <script src="js/jquery-2.1.4.min.js"></script> -->
-    <!-- ↑↑skillbarの公式ページが推奨してたVersion（別で自分で読み込んでたものでも動いたのでコメントアウトで保留） -->
-    <script src="./js/skill.bars.jquery.js"></script>
-    <script src="./js/index.js"></script>
-    <!-- JS, jQuery 関係の読み込み　↑ここまで -->
+      <p>
+        社会人経験を6年間ほど積んだ後、英会話経験ほとんど０のままフィリピンで短期留学をし、<br>
+        そのままカナダに渡ってワーキングホリデーで1年間滞在していました。<br>
+        カナダで働いていたPrintShopで、お客さんの対応や簡単なデザイン業務に携わっていましたが、
+      </p>
+      <p style="font-weight: 700;margin: 30px 0;">
+        「自分が作ったものがお客さんの役に立つ、喜んでもらえる」<br>
+        「もっとビジネスを広げたいお客さんを手助けしたい」
+      </p>
+      <p>
+        という、”仕事のやりがい”や”もどかしさ”を日々強く感じて、Webデザイナーへの転身を志しました。
+      </p>
+    </div>
+    <div class="greeting__button">
+      <button>なぜWEBデザイナー？</button>
+      <span style="font-size: 13px;margin-top: 10px;">よければお付き合いください！</span>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="skewed-bg">
+      <div class="ly-inner about__wrapper">
+        <h2 class="headding">About Yuuri</h2>
+        <div class="about__media">
+          <div class="about__picture">
+            <img src="./img/face-icon.jpg" alt="顔写真">
+          </div>
+          <div class="about__introduction">
+            <p class="about__introduction__subtitle">
+              ／<br>
+              　私はこんな人です<br>
+              ＼
+            </p>
+            <div class="about__introduction__text">
+              <ul>
+                <li>新しい出会いやご縁、人との繋がりは、私にとって大切なものです</li>
+                <li>自分の言動で誰かが喜んだり笑ったりすると嬉しいです</li>
+                <li>笑うと目がなくなります</li>
+                <li>ここ数年の座右の銘はNothing comes of nothing.（無から有は生まれない）</li>
+                <li>カナダで現地の人々や文化を知り、大好きになりました</li>
+              </ul>
+            </div>
+            <p class="about__introduction__subtitle">
+              ／<br>
+              　こんなことやものが好きです<br>
+              ＼
+            </p>
+            <div>
+              <p class="about__introduction__text">
+                ＃音楽フェスに参加してアウトドア気分を味わうこと　＃好きなアーティストのライブに行くこと　＃MAN WITH A MISSION　＃Tim
+                Hortons（カナダのドーナツチェーン）　＃某漫画アプリの無料チケットを日々追いかけ中　＃WEBデザイン・コーディングに関する勉強　＃旅行　＃インテリアを眺める・家の整理整頓や収納を考えること　＃写真を撮って思い出を形に残すこと　＃英語を話すこと　＃これまで出会って仲良くなった友達や、尊敬する上司・先輩
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="about__swiper">
+          あいうえお
+        </div>
+      </div>
+  </section>
+
+  <!-- JS, jQuery 関係の読み込み　↓ここから -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <!-- <script src="js/jquery-2.1.4.min.js"></script> -->
+  <!-- ↑↑skillbarの公式ページが推奨してたVersion（別で自分で読み込んでたものでも動いたのでコメントアウトで保留） -->
+  <script src="./js/skill.bars.jquery.js"></script>
+  <script src="./js/index.js"></script>
+  <!-- JS, jQuery 関係の読み込み　↑ここまで -->
 </body>
 
 </html>

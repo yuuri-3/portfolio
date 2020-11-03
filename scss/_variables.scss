@@ -2,10 +2,10 @@ $bgColor:#f5e7ee;
 $moduleColor:#ca8cdc;
 
 // メディアクエリを設定する関数　ここから　-----------------------------------
-$innerWidth: 1150px;
+$innerWidth: 1200px;
 $breakpoints: ("sp": "screen and (max-width: 767px)",
-  "tab": "screen and (max-width: #{innerWidth - 1px})",
-  "pc": "screen and (min-width: #{innerWidth})",
+  "tab": "screen and (max-width: #{$innerWidth - 1px})",
+  "pc": "screen and (min-width: #{$innerWidth})",
 );
 
 @mixin mq($breakpoint: sp) {
