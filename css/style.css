@@ -286,8 +286,14 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  border-top: 10vw solid #fff;
+  border-top: 15vw solid #fff;
   border-right: 100vw solid transparent;
+}
+
+.skewed-bg__children {
+  margin-top: -70px;
+  position: relative;
+  z-index: 1;
 }
 
 .swiper-custom-parent {
@@ -319,6 +325,50 @@ body {
 /* .carousel-image:hover {
   transform: scale(1.2);
 } */
+.skillbar {
+  margin-bottom: 20px;
+}
+
+.skillbar:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
+.skills__skillbars {
+  width: 50%;
+  margin-right: 30px;
+}
+
+.skillbar-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.skillbar-container {
+  height: 20px;
+  background-color: #f9f9f9;
+  border-radius: 50px;
+  -webkit-box-shadow: 2px 5px 11px -5px rgba(0, 0, 0, 0.15);
+          box-shadow: 2px 5px 11px -5px rgba(0, 0, 0, 0.15);
+}
+
+.skillbar-bar {
+  width: 0;
+  height: 20px;
+  background-color: #ca8cdc;
+  border-radius: 50px;
+}
+
+.skills__supplement {
+  text-align: left;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.skills__description {
+  width: 50%;
+  margin-left: 30px;
+}
+
 .header {
   text-align: center;
   width: 100%;
@@ -346,7 +396,8 @@ body {
 .ly-inner {
   text-align: center;
   width: 80%;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 1200px) {
@@ -370,12 +421,27 @@ body {
   display: block;
   width: 345px;
   height: 2px;
-  margin: 7px auto 10px;
+  margin: 0px auto 10px;
   background-color: #ca8cdc;
 }
 
 .sub-headding__greeting {
   margin-bottom: 30px;
+}
+
+.sub-headding__skills-webdesign::after {
+  width: 180px;
+  margin: 0;
+}
+
+.sub-headding__skills-coding::after {
+  width: 180px;
+  margin: 0;
+}
+
+.sub-headding__skills-wannado::after {
+  width: 220px;
+  margin: 0;
 }
 
 .greeting {
@@ -446,9 +512,6 @@ body {
 }
 
 .about__wrapper {
-  margin-top: -70px;
-  position: relative;
-  z-index: 1;
   text-align: right;
 }
 
@@ -510,6 +573,24 @@ body {
 
 .personality {
   text-align: left;
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+  padding-top: 15vw;
+  margin-top: -15vw;
+}
+
+.personality .headding {
+  text-align: left;
+}
+
+.personality::before {
+  content: '';
+  position: absolute;
+  top: 0vw;
+  left: 0;
+  border-bottom: 15vw solid #fff;
+  border-left: 100vw solid transparent;
 }
 
 .personality__wrapper {
@@ -607,5 +688,43 @@ body {
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 10px;
+}
+
+.skills .headding {
+  text-align: right;
+}
+
+.skills__wrapper {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skills__wrapper ul {
+  margin-bottom: 30px;
+}
+
+.skills__list ul {
+  padding-left: 1.5em;
+  position: relative;
+  margin-top: 25px;
+  text-align: left;
+}
+
+.skills__list ul li {
+  list-style: none;
+}
+
+.skills__list ul li::before {
+  font-family: "Font Awesome 5 free";
+  content: "\f138";
+  position: absolute;
+  left: 0;
+  color: #777;
+  font-weight: 900;
 }
 /*# sourceMappingURL=style.css.map */

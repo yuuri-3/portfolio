@@ -56,7 +56,8 @@ window.addEventListener('scroll', changeHamburgerColor);
 
 
 
-// ここからスクロールボタンのフェードイン・フェードイン---------------------------------
+// ここからスクロールボタンのフェードイン・フェードイン----------------------------------------------------------
+
 function hiddenScrollButton() {
   var trigger = document.getElementById('js-scrollDown__fadeout');
   var scrollButton = document.getElementById('scrolldown-button');
@@ -76,11 +77,13 @@ function hiddenScrollButton() {
   }
 }
 window.addEventListener('scroll', hiddenScrollButton);
-// ここまでスクロールボタンのフェードイン・フェードイン---------------------------------
+// ここまでスクロールボタンのフェードイン・フェードイン----------------------------------------------------------
 
 
 
-// ここからスクロールに合わせてナビゲーションバー固定の切り替え---------------------------
+
+// ここからスクロールに合わせてナビゲーションバー固定の切り替え----------------------------------------------------------
+
 function fixedGlobalNav() {
   var trigger = document.getElementById('js-trigger');
   var globalNav = document.getElementById('js-global-nav');
@@ -98,10 +101,12 @@ function fixedGlobalNav() {
 }
 window.addEventListener('scroll', fixedGlobalNav);
 // これで作ったfixedGlobalNav()という関数をscrollに合わせて実行する
-// ここまでスクロールに合わせてナビゲーションバー固定の切り替え---------------------------
+// ここまでスクロールに合わせてナビゲーションバー固定の切り替え----------------------------------------------------------
 
 
-// ここからSwiperの設定-------------------------------
+
+// ここからSwiperの設定----------------------------------------------------------
+
 document.addEventListener('DOMContentLoaded', function () {
   var mql = window.matchMedia('screen and (min-width: 769px)');
   var prams = {
@@ -134,10 +139,12 @@ document.addEventListener('DOMContentLoaded', function () {
   mql.addListener(slider);
   slider(mql);
 });
-// ここまでSwiperの設定-------------------------------
+// ここまでSwiperの設定----------------------------------------------------------
 
 
-// ここからPersonalityのアイコンフェードイン-------------------------------
+
+// ここからPersonalityのアイコンフェードイン----------------------------------------------------------
+
 $(window).on('load scroll', function () {
   $(".personality__box").each(function () {
     var winScroll = $(window).scrollTop();
@@ -148,4 +155,149 @@ $(window).on('load scroll', function () {
     }
   });
 });
-// ここまでPersonalityのアイコンフェードイン-------------------------------
+// ここまでPersonalityのアイコンフェードイン----------------------------------------------------------
+
+
+
+// ここからスキルバー----------------------------------------------------------
+
+$(window).on('load scroll', function () {
+  if ($('.skillbar').hasClass("js-processed")) return;
+  // スクロールするたびにスクロールイベントが発火して数字が動いてしまうので、
+  // 一度実行したあとに「js-processedというclass名を追加
+  // →　js-processedというclass名がある場合は実行しないと最初に宣言することで繰り返し発火を防ぐ
+  $(".skillbar").each(function () {
+    var winScroll = $(window).scrollTop();
+    var winHeight = $(window).height();
+    var scrollPos = winScroll + (winHeight * 0.8);
+    if ($(this).offset().top < scrollPos) {
+      $('.skillbar').skillBars({
+        from: 0,
+        speed: 1500,
+        interval: 100,
+      });
+      $('.skillbar').addClass('js-processed');
+    }
+  });
+});
+// $(window).on('load scroll', function () {
+//   if ($('.skillbar-2').hasClass("js-processed")) return;
+//   // スクロールするたびにスクロールイベントが発火して数字が動いてしまうので、
+//   // 一度実行したあとに「js-processedというclass名を追加
+//   // →　js-processedというclass名がある場合は実行しないと最初に宣言することで繰り返し発火を防ぐ
+//   $(".skillbar-2").each(function () {
+//     var winScroll = $(window).scrollTop();
+//     var winHeight = $(window).height();
+//     var scrollPos = winScroll + (winHeight * 0.8);
+//     if ($(this).offset().top < scrollPos) {
+//       $('.skillbar-2').skillBars({
+//         from: 0,
+//         speed: 2700,
+//         interval: 100,
+//       });
+//       $('.skillbar-2').addClass('js-processed');
+//     }
+//   });
+// });
+// $(window).on('load scroll', function () {
+//   if ($('.skillbar-3').hasClass("js-processed")) return;
+//   // スクロールするたびにスクロールイベントが発火して数字が動いてしまうので、
+//   // 一度実行したあとに「js-processedというclass名を追加
+//   // →　js-processedというclass名がある場合は実行しないと最初に宣言することで繰り返し発火を防ぐ
+//   $(".skillbar-3").each(function () {
+//     var winScroll = $(window).scrollTop();
+//     var winHeight = $(window).height();
+//     var scrollPos = winScroll + (winHeight * 0.8);
+//     if ($(this).offset().top < scrollPos) {
+//       $('.skillbar-3').skillBars({
+//         from: 0,
+//         speed: 2700,
+//         interval: 100,
+//       });
+//       $('.skillbar-3').addClass('js-processed');
+//     }
+//   });
+// });
+// $(window).on('load scroll', function () {
+//   if ($('.skillbar-4').hasClass("js-processed")) return;
+//   // スクロールするたびにスクロールイベントが発火して数字が動いてしまうので、
+//   // 一度実行したあとに「js-processedというclass名を追加
+//   // →　js-processedというclass名がある場合は実行しないと最初に宣言することで繰り返し発火を防ぐ
+//   $(".skillbar-4").each(function () {
+//     var winScroll = $(window).scrollTop();
+//     var winHeight = $(window).height();
+//     var scrollPos = winScroll + (winHeight * 0.8);
+//     if ($(this).offset().top < scrollPos) {
+//       $('.skillbar-4').skillBars({
+//         from: 0,
+//         speed: 2700,
+//         interval: 100,
+//       });
+//       $('.skillbar-4').addClass('js-processed');
+//     }
+//   });
+// });
+// $(window).on('load scroll', function () {
+//   if ($('.skillbar-5').hasClass("js-processed")) return;
+//   // スクロールするたびにスクロールイベントが発火して数字が動いてしまうので、
+//   // 一度実行したあとに「js-processedというclass名を追加
+//   // →　js-processedというclass名がある場合は実行しないと最初に宣言することで繰り返し発火を防ぐ
+//   $(".skillbar-5").each(function () {
+//     var winScroll = $(window).scrollTop();
+//     var winHeight = $(window).height();
+//     var scrollPos = winScroll + (winHeight * 0.8);
+//     if ($(this).offset().top < scrollPos) {
+//       $('.skillbar-5').skillBars({
+//         from: 0,
+//         speed: 2700,
+//         interval: 100,
+//       });
+//       $('.skillbar-5').addClass('js-processed');
+//     }
+//   });
+// });
+// $(window).on('load scroll', function () {
+//   if ($('.skillbar-6').hasClass("js-processed")) return;
+//   // スクロールするたびにスクロールイベントが発火して数字が動いてしまうので、
+//   // 一度実行したあとに「js-processedというclass名を追加
+//   // →　js-processedというclass名がある場合は実行しないと最初に宣言することで繰り返し発火を防ぐ
+//   $(".skillbar-6").each(function () {
+//     var winScroll = $(window).scrollTop();
+//     var winHeight = $(window).height();
+//     var scrollPos = winScroll + (winHeight * 0.8);
+//     if ($(this).offset().top < scrollPos) {
+//       $('.skillbar-6').skillBars({
+//         from: 0,
+//         speed: 2700,
+//         interval: 100,
+//       });
+//       $('.skillbar-6').addClass('js-processed');
+//     }
+//   });
+// });
+// $(window).on('load scroll', function () {
+//   if ($('.skillbar-7').hasClass("js-processed")) return;
+//   // スクロールするたびにスクロールイベントが発火して数字が動いてしまうので、
+//   // 一度実行したあとに「js-processedというclass名を追加
+//   // →　js-processedというclass名がある場合は実行しないと最初に宣言することで繰り返し発火を防ぐ
+//   $(".skillbar-7").each(function () {
+//     var winScroll = $(window).scrollTop();
+//     var winHeight = $(window).height();
+//     var scrollPos = winScroll + (winHeight * 0.8);
+//     if ($(this).offset().top < scrollPos) {
+//       $('.skillbar-7').skillBars({
+//         from: 0,
+//         speed: 2700,
+//         interval: 100,
+//       });
+//       $('.skillbar-7').addClass('js-processed');
+//     }
+//   });
+// });
+
+// ここまでスキルバー----------------------------------------------------------
+
+
+
+
+

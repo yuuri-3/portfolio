@@ -86,7 +86,7 @@
 
   <section id="about">
     <div class="skewed-bg">
-      <div class="ly-inner about__wrapper">
+      <div class="ly-inner skewed-bg__children about__wrapper">
         <h2 class="headding">About Yuuri</h2>
         <div class="about__media">
           <div class="about__picture">
@@ -169,60 +169,178 @@
   </section>
 
 
-  <section class="ly-inner personality">
-    <h2 class="headding">How I work</h2>
-    <div class="personality__wrapper">
-      <div class="personality__box js-slide-first">
-        <div class="personality__icon"><img src="./img/personality-icon_like.svg" alt="いいねのアイコン"></div>
-        <div class="personality__title">
-          良い所や存在意義を見つけます
+  <section class="personality">
+    <div class="ly-inner">
+      <h2 class="headding">How I work</h2>
+      <div class="personality__wrapper">
+        <div class="personality__box js-slide-first">
+          <div class="personality__icon"><img src="./img/personality-icon_like.svg" alt="いいねのアイコン"></div>
+          <div class="personality__title">
+            良い所や存在意義を見つけます
+          </div>
+          <p class="personality__text">
+            ぱっと見で気付かなくても、人にも物にも必ず長所があり、作業にも意義があります。それを知らずにいるのはもったいない！と感じる性格です。
+          </p>
         </div>
-        <p class="personality__text">
-          ぱっと見で気付かなくても、人にも物にも必ず長所があり、作業にも意義があります。それを知らずにいるのはもったいない！と感じる性格です。
-        </p>
-      </div>
-      <div class="personality__box js-slide-second">
-        <div class="personality__icon"><img src="./img/personality-improvement.svg" alt="ハンマーのアイコン">
+        <div class="personality__box js-slide-second">
+          <div class="personality__icon"><img src="./img/personality-improvement.svg" alt="ハンマーのアイコン">
+          </div>
+          <div class="personality__title">
+            改善の余地を見出します
+          </div>
+          <p class="personality__text">
+            日頃から何のための作業か、何のための企画か、すべての「何のために」というゴールを見据え、到達するためにもっと良い方法や案はないかと思考を止めません。
+          </p>
         </div>
-        <div class="personality__title">
-          改善の余地を見出します
+        <div class="personality__box js-slide-third">
+          <div class="personality__icon"><img src="./img/personality-icon_thinking.svg" alt="思考のアイコン"></div>
+          <div class="personality__title">
+            戦略的縁の下
+          </div>
+          <p class="personality__text">
+            組織の動きや周りの空気に対して常にアンテナを張り、どうすれば良くなるか、そのために自分にできることは何なのか、縁の下的な動きをするのが好きです。
+          </p>
         </div>
-        <p class="personality__text">
-          日頃から何のための作業か、何のための企画か、すべての「何のために」というゴールを見据え、到達するためにもっと良い方法や案はないかと思考を止めません。
-        </p>
-      </div>
-      <div class="personality__box js-slide-third">
-        <div class="personality__icon"><img src="./img/personality-icon_thinking.svg" alt="思考のアイコン"></div>
-        <div class="personality__title">
-          戦略的縁の下
-        </div>
-        <p class="personality__text">
-          組織の動きや周りの空気に対して常にアンテナを張り、どうすれば良くなるか、そのために自分にできることは何なのか、縁の下的な動きをするのが好きです。
-        </p>
       </div>
     </div>
   </section>
 
-  <section class="ly-inner personality">
-    <h2 class="headding">How I work</h2>
-    <div class="personality__wrapper">
-      <div class="personality__box js-slide-first">
-        <div class="personality__icon"><img src="./img/personality-icon_like.svg" alt="いいねのアイコン"></div>
-        <div class="personality__title">良い所を見つけます</div>
-        <p class="personality__text">ぱっと見で気付かなくても、人にも物にも必ず長所があります。それを知らずにいるのはもったいない！と感じる性格です。
-        </p>
-      </div>
-      <div class="personality__box js-slide-second">
-        <div class="personality__icon"><img src="./img/personality-icon_conversation.svg" alt="会話のアイコン">
+  <section class="skills" id="skills">
+    <div class="skewed-bg">
+      <div class="ly-inner skewed-bg__children">
+        <h2 class="headding">Skills</h2>
+        <div class="skills__wrapper">
+          <div class="skills__skillbars">
+            <div class="skillbar" data-percent="80">
+              <div class="skill-info">
+                <p class="skillbar-title">HTML5</p>
+                <!-- <span class="skill-bar-percent"></p> -->
+              </div>
+              <div class="skillbar-container">
+                <div class="skillbar-bar"></div>
+              </div>
+              <div class="skills__supplement">
+                最初に「HTML5/CSS3モダンコーディング」で基本的なHTMLの構造や必要な記述を学んだ後、その都度インターネットで情報を集めながらよりよい設計について学んでいます。
+              </div>
+            </div>
+            <div class="skillbar" data-percent=50>
+              <div class="skill-info">
+                <p class="skillbar-title">CSS3</p>
+                <!-- <span class="skill-bar-percent"></p> -->
+              </div>
+              <div class="skillbar-container">
+                <div class="skillbar-bar"></div>
+              </div>
+              <div class="skills__supplement">
+                最近のマイブームは、CSS設計に関する情報を読み漁ってもっともっとメンテナンスに強くて読みやすい設計を訓練していくことです。
+              </div>
+            </div>
+            <div class="skillbar" data-percent="30">
+              <div class="skill-info">
+                <p class="skillbar-title">Saas(SCSS)</p>
+                <!-- <span class="skill-bar-percent"></p> -->
+              </div>
+              <div class="skillbar-container">
+                <div class="skillbar-bar"></div>
+              </div>
+              <div class="skills__supplement">
+                とにかく導入してみよう！ということで、チュートリアルのみ学んだ後、Node.jsを使ったVScodeでの自動コンパイル設定を乗り越えて、やっと使い始めた所です。これから早くやりたいことは、パーツごとにファイルを切り分けてメンテナンス性をあげることです。
+              </div>
+            </div>
+            <div class="skillbar" data-percent="5">
+              <div class="skill-info">
+                <p class="skillbar-title">JavaScript</p>
+                <!-- <span class="skill-bar-percent"></p> -->
+              </div>
+              <div class="skillbar-container">
+                <div class="skillbar-bar"></div>
+              </div>
+              <div class="skills__supplement">
+                Progateで基本中の基本のみ学びましたが、普段は基本的に実装したい機能を調べる→コードを読んでそれぞれの行を理解する→次回につながるようにメモを残しながら実装する、というサイクルを繰り返しています。
+              </div>
+            </div>
+            <div class="skillbar" data-percent="5">
+              <div class="skill-info">
+                <p class="skillbar-title">jQuery</p>
+                <!-- <span class="skill-bar-percent"></p> -->
+              </div>
+              <div class="skillbar-container">
+                <div class="skillbar-bar"></div>
+              </div>
+              <div class="skills__supplement">
+                JSと同様で、使いたい機能基準でその都度まなんでいます。
+              </div>
+            </div>
+            <div class="skillbar" data-percent="30">
+              <div class="skill-info">
+                <p class="skillbar-title">Photoshop</p>
+                <!-- <span class="skill-bar-percent"></p> -->
+              </div>
+              <div class="skillbar-container">
+                <div class="skillbar-bar"></div>
+              </div>
+              <div class="skills__supplement">
+                Photoshop搭載のチュートリアルや、Adobe情報配信メールにあるテクニックなどを一通り試したあとは、ひたすら作品を作ることでデザインもツールも練習しています。直近は週に目標件数を決めてクラウドソーシングのコンペを題材にバナーを作成しています。
+              </div>
+            </div>
+            <div class="skillbar" data-percent="70">
+              <div class="skill-info">
+                <p class="skillbar-title">AdobeXD</p>
+                <!-- <span class="skill-bar-percent"></p> -->
+              </div>
+              <div class="skillbar-container">
+                <div class="skillbar-bar"></div>
+              </div>
+              <div class="skills__supplement">
+                一通りの機能は使えるようになりました。1つのデザインカンプを制作する際に新しい表現方法を1度か2度調べる程度です。これからやりたいことは、まだ知らない表現方法や機能の存在に気付くためにAdobeXDの参考書を読むことです（購入済み）。
+              </div>
+            </div>
+          </div>
+
+
+          <div class="skills__description">
+            <span class="sub-headding sub-headding__skills-webdesign">
+              WEBデザインに関する軌跡
+            </span>
+            <div class="skills__list">
+              <ul>
+                <li>【N予備校】WEBデザインコース受講</li>
+                <li>【書籍】ノンデザイナーズ・デザインブック（○○○○著）</li>
+                <li>【書籍】やってはいけないデザイン</li>
+                <li>【書籍】UIデザインの教科書</li>
+              </ul>
+            </div>
+            <span class="sub-headding sub-headding__skills-coding">
+              コーディングに関する軌跡
+            </span>
+            <div class="skills__list">
+              <ul>
+                <li>【Progate】Sassコース完了、git入門のみ完了、Command Line基礎編完了</li>
+                <li>【ドットインストール】HTMLとCSS完了、git入門のみ完了
+                </li>
+              </ul>
+            </div>
+            <span class="sub-headding sub-headding__skills-wannado">
+              これからやりたい・学びたいこと
+            </span>
+            <div class="skills__list">
+              <ul>
+                <li>とにかくたくさんの表現を知って自分でデザイン＋コーディング</li>
+                <li>CSS設計完全ガイド（半田惇志著）を読み終えてひたすら実践（現在35%）
+                </li>
+                <li>フォントが与える印象や配色の仕組みなど、WEBデザイン要素毎にもフォーカス
+                </li>
+                <li>Sassをもっと活用する方法や使用例
+                </li>
+                <li>JSやjQueryの基礎を固めるためにprogateやドットインストールを活用
+                </li>
+                <li>まずは現在実装しているJSの機能だけでもES6で書き直せるように勉強
+                </li>
+                <li>クライアントが使いたい！と思うデザインを肌で感じるため定期的にコンペ参加</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="personality__title">キャッチボールを止めません</div>
-        <p class="personality__text">連絡のキャッチボールを、自分の手元で止めないようにいつも意識しています。止めてしまう場合も、なぜ止まるのか伝えて、安心してもらえるように心掛けています。
-        </p>
-      </div>
-      <div class="personality__box js-slide-third">
-        <div class="personality__icon"><img src="./img/personality-icon_thinking.svg" alt="思考のアイコン"></div>
-        <div class="personality__title">目的から常に逆算します</div>
-        <p class="personality__text">何のための企画なのか、なんのための作業なのか、常にゴールを見据えてより効果的にたどり着けるように考えます。</p>
       </div>
     </div>
   </section>

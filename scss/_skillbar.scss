@@ -1,0 +1,42 @@
+.skillbar {
+  margin-bottom: 20px;
+
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+}
+
+.skills__skillbars {
+  width: 50%;
+  margin-right: 30px;
+}
+
+.skillbar-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.skillbar-container {
+  height: 20px;
+  background-color: #f9f9f9;
+  border-radius: 50px;
+  box-shadow: 2px 5px 11px -5px rgba(0, 0, 0, 0.15);
+}
+
+.skillbar-bar {
+  width: 0;
+  height: 20px;
+  background-color: #ca8cdc;
+  border-radius: 50px;
+}
+
+.skills__supplement {
+  text-align: left;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.skills__description {
+  width: 50%;
+  margin-left: 30px;
+}

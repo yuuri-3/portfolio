@@ -10,7 +10,13 @@
     position: absolute;
     top: 0;
     left: 0;
-    border-top: 10vw solid #fff;
+    border-top: 15vw solid #fff;
     border-right: 100vw solid transparent;
   }
+}
+
+.skewed-bg__children {
+  margin-top: -70px;
+  position: relative;
+  z-index: 1;
 }

@@ -5,6 +5,7 @@
 @import "globalnav";
 @import "skewed-bg";
 @import "swiper";
+@import "skillbar";
 
 
 .header {
@@ -31,7 +32,8 @@
 .ly-inner {
   text-align: center;
   width: 80%;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 
   @include mq(pc) {
     width: $innerWidth;
@@ -52,12 +54,33 @@
     display: block;
     width: 345px;
     height: 2px;
-    margin: 7px auto 10px;
+    margin: 0px auto 10px;
     background-color: $moduleColor;
   }
 
   &__greeting {
     margin-bottom: 30px;
+  }
+
+  &__skills-webdesign {
+    &::after {
+      width: 180px;
+      margin: 0;
+    }
+  }
+
+  &__skills-coding {
+    &::after {
+      width: 180px;
+      margin: 0;
+    }
+  }
+
+  &__skills-wannado {
+    &::after {
+      width: 220px;
+      margin: 0;
+    }
   }
 }
 
@@ -124,9 +147,6 @@
 }
 
 .about__wrapper {
-  margin-top: -70px;
-  position: relative;
-  z-index: 1;
   text-align: right;
 }
 
@@ -186,6 +206,24 @@
 
 .personality {
   text-align: left;
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+  padding-top: 15vw;
+  margin-top: -15vw;
+
+  .headding {
+    text-align: left;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0vw;
+    left: 0;
+    border-bottom: 15vw solid #fff;
+    border-left: 100vw solid transparent;
+  }
 }
 
 .personality__wrapper {
@@ -259,4 +297,42 @@
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 10px;
+}
+
+.skills {
+  .headding {
+    text-align: right;
+  }
+}
+
+.skills__wrapper {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+
+  ul {
+    margin-bottom: 30px;
+  }
+}
+
+.skills__list {
+  ul {
+    padding-left: 1.5em;
+    position: relative;
+    margin-top: 25px;
+    text-align: left;
+
+    li {
+      list-style: none;
+    }
+
+    li::before {
+      font-family: "Font Awesome 5 free";
+      content: "\f138";
+      position: absolute;
+      left: 0;
+      color: #777;
+      font-weight: 900;
+    }
+  }
 }
