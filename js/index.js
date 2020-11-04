@@ -121,6 +121,10 @@ document.addEventListener('DOMContentLoaded', function () {
     //   el: '.swiper-pagination',
     //   clickable: true,
     // },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: true,
+    },
   };
   var mySwiper = new Swiper('.swiper-container', prams);
 
@@ -297,3 +301,43 @@ $(window).on('load scroll', function () {
 
 // ここまでスキルバー----------------------------------------------------------
 
+
+
+
+// ここからモーダルウィンドウ表示----------------------------------------------------------
+$(function () {
+  var winScrollTop;
+  $('.js-modal-open').each(function () {
+    $(this).on('click', function () {
+      // ↑2行について
+      // 「each」メソッドの中で「this」を使うことで、どの「js-modal-open」がクリックされたかわかるようにする
+      winScrollTop = $(window).scrollTop();
+      // ↑モーダルでスクロールして、閉じたあとに元の場所に戻すためのスクロール位置を取得している
+      var target = $(this).data('target');
+      // dataメソッドで、クリックしたthis（＝js-modal-open)属性を取得して変数targetに代入することで、どのthisをクリックしたか判別できる
+      var modal = document.getElementById(target);
+      $(modal).fadeIn();
+      $('body').css('overflow', 'hidden');
+      // ↑モーダル開いた際に、bodyタグにhiddenをつけて二重スクロール防止
+      return false;
+    });
+  });
+  $('.js-modal-close').on('click', function () {
+    $('.js-modal').fadeOut();
+    $('body').css('overflow', 'auto');
+    // ↑モーダル閉じる際に、bodyのスクロールをautoに戻す
+    $('body,html').stop().animate({ scrollTop: winScrollTop }, 100);
+    // ↑js-modal-closeがクリックされると、フェードアウトのアニメーションと同時に元の場所までスクロール
+    return false;
+  });
+});
+// ここまでモーダルウィンドウ表示----------------------------------------------------------
+
+
+// $('.js-modal-open').on('click', function () {
+//   if ($(this).is(':checked')) {
+//     $('body').css('overflow', 'hidden');
+//   } else {
+//     $('body').css('overflow', 'auto');
+//   }
+// });

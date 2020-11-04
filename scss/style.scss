@@ -82,6 +82,14 @@
       margin: 0;
     }
   }
+
+  &__works-modal-mwam {
+    &::after {
+      width: 280px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .greeting {
@@ -561,5 +569,64 @@
     &:nth-child(1) {
       margin-left: 0;
     }
+  }
+}
+
+
+
+
+
+.works__modal {
+  display: none;
+  // 初期状態は非表示→jQueryでボタンクリック時に表示させるので最初は非表示
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  overflow-y: scroll;
+}
+
+.works__modal__bg {
+  background: rgba($bgColor, 0.6);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.works__modal__content {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 75%;
+  margin: 50px 0;
+}
+
+.works__modal__category {
+  text-align: center;
+
+  .headding {
+    opacity: .3;
+    display: inline-block;
+    margin: 0 auto;
+  }
+}
+
+.works__modal__item {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+
+.works__modal__description {
+  width: 75%;
+  margin: 50px auto 70px;
+
+  span {
+    display: block;
+    font-weight: 700;
   }
 }

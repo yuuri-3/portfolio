@@ -347,16 +347,92 @@
     <div class="ly-inner">
       <h2 class="headding">Works</h2>
       <div class="works__wrapper">
-        <div class="works__box"><a href=""><img src="./img/works/mwam__top-image.jpg" alt=""></a></div>
-        <div class="works__box"><a href=""><img src="./img/works/recruiting__top-image.jpg" alt=""></a></div>
-        <div class="works__box"><a href=""><img src="./img/works/quorea__top-image.jpg" alt=""></a></div>
-        <div class="works__box"><a href=""><img src="./img/works/clothes__top-image.jpg" alt=""></a></div>
-        <div class="works__box"><a href=""><img src="./img/works/furniture__top-image.jpg" alt=""></a></div>
-        <div class="works__box"><a href=""><img src="./img/works/car__top-image.jpg" alt=""></div>
+        <div class="works__box"><a class="js-modal-open" href="" data-target="works__modal01"><img
+              src="./img/works/top-image__mwam.jpg" alt=""></a></div>
+        <div class="works__box"><a class="js-modal-open" href="" data-target="works__modal01"><img
+              src="./img/works/top-image__recruiting.jpg" alt=""></a></div>
+        <div class="works__box"><a class="js-modal-open" href="" data-target="works__modal01"><img
+              src="./img/works/top-image__quorea.jpg" alt=""></a></div>
+        <div class="works__box"><a class="js-modal-open" href="" data-target="works__modal01"><img
+              src="./img/works/top-image__clothes.jpg" alt=""></a></div>
+        <div class="works__box"><a class="js-modal-open" href="" data-target="works__modal01"><img
+              src="./img/works/top-image__furniture.jpg" alt=""></a></div>
+        <div class="works__box"><a class="js-modal-open" href="" data-target="works__modal01"><img
+              src="./img/works/top-image__car.jpg" alt=""></div>
         </a>
       </div>
     </div>
   </section>
+
+
+
+  <div class="works__modal js-modal" id="works__modal01">
+    <div class="works__modal__bg js-modal-close"></div>
+    <!-- ↑背景をクリックしてもモーダルが閉じるために必要なレイヤー -->
+    <div class="works__modal__content">
+      <!-- ↓この中がモーダルウィンドウで表示する内容 -->
+      <div class="works__modal__wrapper">
+        <div class="works__modal__category">
+          <span class="headding">WEB site</span>
+        </div>
+        <div class="works__modal__item">
+          <span class="sub-headding sub-headding__works-modal-mwam">
+            アーティスト公式サイトのリニューアル案
+          </span>
+
+          <img style="width: 100%;" src="./img/works/modal__mwam.png" alt="アーティストページのデザイン画面">
+        </div>
+        <div class="works__modal__description">
+          <span>
+            リニューアルする目的のターゲット
+          </span>
+          <p>
+            - まだアーティストを深く知らず、興味を持って訪問してくれたユーザー<br>
+            - アーティストのライブに参加するため、日程や開催地を調べにきたユーザー
+          </p>
+
+          <span style="
+          margin: 15px 0 40px;
+          text-align: center;
+      ">
+            <a href="https://www.mwamjapan.info/" target="_blank">公式サイトはこちら</a>
+          </span>
+
+          <span>
+            リニューアルに際して工夫した点
+          </span>
+          <p>
+            - 最初のページで、各セクションの情報量を増やして、「今アツいのはコレ！」が複数伝わりやすいようにした<br>
+            - ライブスケジュールの部分でまず開催地のエリアが分かるように配置した<br>
+            - フッターの配置バランスを整えた<br>
+            - 本家サイトの雰囲気を損なわないように踏襲しながら、レイアウト等を整えた
+          </p>
+
+          <span style="margin-top: 30px;text-align: center;">
+            <a href="https://xd.adobe.com/view/49632dda-7590-4326-af27-011b39bad06f-1c30/?fullscreen&hints=off"
+              target="_blank">デザインデモページ（PC版）はこちら</a>
+          </span>
+          <span style="margin-bottom: 30px;text-align: center;">
+            <a href="https://xd.adobe.com/view/ae0347c7-3c50-4066-b3a7-5b34e39a5ab5-fb50/?fullscreen&hints=off"
+              target="_blank">デザインデモページ（SP版）はこちら</a>
+          </span>
+          <span style="text-align: center;font-size: 40px;">
+            <a class="js-modal-close" href=""><i class="fas fa-arrow-circle-left"></i></a>
+          </span>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="works__modal js-modal" id="works__modal02">
+    <div class="works__modal__bg js-modal-close"></div>
+    <div class="works__modal__content">
+      <p>2つ目モーダルウィンドウです。ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、 背景の黒い部分をクリックしても閉じることができます。</p>
+      <a class="js-modal-close" href="">閉じる</a>
+    </div>
+  </div>
+
 
 
   <footer class="footer">
@@ -376,6 +452,12 @@
     </div>
     <div class="footer__triangle"></div>
   </footer>
+
+
+
+
+
+
 
 
   <!-- JS, jQuery 関係の読み込み　↓ここから -->
