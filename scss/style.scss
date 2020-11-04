@@ -284,6 +284,8 @@
 }
 
 .skills {
+  // margin-top: -50px;
+
   .headding {
     text-align: right;
   }
@@ -354,13 +356,85 @@
       margin-top: 8px;
       box-shadow: none;
     }
-
-
   }
 
   img {
     width: auto;
     height: 100%;
   }
+}
 
+.footer {
+  text-align: center;
+  width: 100%;
+  background: url('../img/bg.jpg') no-repeat center;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin-top: 150px;
+  padding-bottom: 70px;
+
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   border-bottom: 5vw solid #999;
+  //   /* ちら見せ三角 高さを調節*/
+  //   border-left: 100vw solid transparent;
+  // }
+
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   border-bottom: 10vw solid #fff;
+  //   /* 三角を白に */
+  //   border-right: 100vw solid transparent;
+  // }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 15vw solid #fff;
+    border-left: 100vw solid transparent;
+  }
+}
+
+.footer__wrapper {
+  padding-top: 330px;
+  line-height: 1.8;
+}
+
+.footer__triangle {
+  position: absolute;
+  border-top: 7.5vw solid transparent;
+  border-right: 50vw solid #9BADC3;
+  border-bottom: 7.6vw solid transparent;
+  top: 0px;
+  right: 0;
+  z-index: 1;
+}
+
+.footer__message {
+  display: block;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.footer__icons {
+  margin-top: 200px;
+  margin-bottom: 30px;
+  font-size: 30px;
+
+
+  a {
+    margin-left: 15px;
+
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+  }
 }
