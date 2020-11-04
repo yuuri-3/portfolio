@@ -52,3 +52,39 @@
   opacity: 1;
   visibility: visible;
 }
+
+
+
+
+.reason__arrow {
+  position: relative;
+
+  span {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 24px;
+    height: 24px;
+    border-left: 1px solid #333;
+    border-bottom: 1px solid #333;
+    transform: rotate(-45deg);
+    animation: sdb 1.7s infinite;
+  }
+}
+
+@keyframes sdb {
+  0% {
+    transform: rotateZ(-45deg) translate(0, 0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: rotateZ(-45deg) translate(-10px, 10px);
+    opacity: 0.1;
+  }
+
+  100% {
+    transform: rotateZ(-45deg) translate(0, 0);
+    opacity: 1;
+  }
+}
