@@ -33,6 +33,7 @@
         <li class="hamburger__item profileLink"><a href="#profile">About</a></li>
         <li class="hamburger__item skillsLink"><a href="#skills">Skills</a></li>
         <li class="hamburger__item worksLink"><a href="#works">Works</a></li>
+        <li class="hamburger__item worksLink"><a href="#footer">Contact</a></li>
       </ul>
     </div>
     <!-- ↑ここまで　ハンバーガーメニュー関連 -->
@@ -46,9 +47,10 @@
       <nav class="header__global-nav" id="js-global-nav">
         <ul>
           <li><a href="#greeting">Greeting</a></li>
-          <li><a href="#personality">About</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#works">Works</a></li>
+          <li><a href="#footer">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -57,24 +59,48 @@
     <a class="header__scrolldown-button" href="#Greeting" id="scrolldown-button"><span></span>Scroll</a>
   </header>
 
-  <section class="ly-inner greeting" id="greeting">
-    <h2 class="headding">Hello, I'm Yuuri :)</h2>
+  <section class="ly-inner greeting">
+    <h2 class="headding" id="greeting">Hello, I'm Yuuri :)</h2>
     <div class="greeting__message">
-      <span style="font-size: 13px;">こんにちは！</span>
-      <span class="sub-headding sub-headding__greeting">＼　WEBデザイナーを目指している、ゆうりと申します　／</span>
-
-      <p>
-        社会人経験を6年間ほど積んだ後、英会話経験ほとんど０のままフィリピンで短期留学をし、<br>
-        そのままカナダに渡ってワーキングホリデーで1年間滞在していました。<br>
-        カナダで働いていたPrintShopで、お客さんの対応や簡単なデザイン業務に携わっていましたが、
-      </p>
-      <p style="font-weight: 700;margin: 30px 0;">
-        「自分が作ったものがお客さんの役に立つ、喜んでもらえる」<br>
-        「もっとビジネスを広げたいお客さんを手助けしたい」
-      </p>
-      <p>
-        という、”仕事のやりがい”や”もどかしさ”を日々強く感じて、Webデザイナーへの転身を志しました。
-      </p>
+      <span>こんにちは！</span>
+      <div class="greeting__pc-visible">
+        <span class="sub-headding sub-headding__greeting">
+          ＼　WEBデザイナーを目指している、ゆうりと申します　／
+        </span>
+      </div>
+      <div class="greeting__sp-visible">
+        <div>
+          WEBデザイナーを目指している
+          <span class="sub-headding sub-headding__greeting">
+            ゆうりと申します
+          </span>
+        </div>
+      </div>
+      <div class="greeting__pc-visible">
+        <p>
+          社会人経験を6年間ほど積んだ後、英会話経験ほとんど０のままフィリピンで短期留学をし、<br>
+          そのままカナダに渡ってワーキングホリデーで1年間滞在していました。<br>
+          カナダで働いていたプリントショップで、お客さんの対応や簡単なデザイン業務に携わっていましたが、
+        </p>
+        <p style="font-weight: 700;margin: 30px 0;">
+          「自分が作ったものがお客さんの役に立つ、喜んでもらえる」<br>
+          「もっとビジネスを広げたいお客さんを手助けしたい」
+        </p>
+        <p>
+          という、”仕事のやりがい”や”もどかしさ”を日々強く感じて、Webデザイナーへの転身を志しました。
+        </p>
+      </div>
+      <div class="greeting__sp-visible">
+        <p>
+          社会人経験を6年間ほど積んだ後、英会話経験ほとんど０のままフィリピンで短期留学をし、そのままカナダに渡ってワーキングホリデーで1年間滞在していました。カナダで働いていたプリントショップで、お客さんの対応や簡単なデザイン業務に携わっていましたが、
+        </p>
+        <p style="font-weight: 700;margin: 30px 0;">
+          自分が作ったものがお客さんの役に立つ、喜んでもらえる・もっとビジネスを広げたいお客さんを手助けしたい
+        </p>
+        <p>
+          という、”仕事のやりがい”や”もどかしさ”を日々強く感じて、Webデザイナーへの転身を志しました。
+        </p>
+      </div>
     </div>
     <div class="greeting__button">
       <button><a href="reason.html">なぜWEBデザイナー？</a></button>
@@ -82,15 +108,15 @@
     </div>
   </section>
 
-  <section id="about">
+  <section>
     <div class="skewed-bg">
       <div class="ly-inner skewed-bg__children about__wrapper">
-        <h2 class="headding">About Yuuri</h2>
+        <h2 class="headding" id="about">About Yuuri</h2>
         <div class="about__media">
           <div class="about__picture">
             <img src="./img/face-icon.jpg" alt="顔写真">
           </div>
-          <div class="about__introduction">
+          <div class="about__introduction about__introduction__pc-visible">
             <p class="about__introduction__subtitle">
               ／<br>
               　私はこんな人です<br>
@@ -109,6 +135,29 @@
               ／<br>
               　こんなことやものが好きです<br>
               ＼
+            </p>
+            <div>
+              <p class="about__introduction__text">
+                ＃音楽フェスに参加してアウトドア気分を味わうこと　＃好きなアーティストのライブに行くこと　＃MAN WITH A MISSION　＃Tim
+                Hortons（カナダのドーナツチェーン）　＃某漫画アプリの無料チケットを日々追いかけ中　＃WEBデザイン・コーディングに関する勉強　＃旅行　＃インテリアを眺める・家の整理整頓や収納を考えること　＃写真を撮って思い出を形に残すこと　＃英語を話すこと　＃これまで出会って仲良くなった友達や、尊敬する上司・先輩
+              </p>
+            </div>
+          </div>
+          <div class="about__introduction about__introduction__sp-visible">
+            <p class="about__introduction__subtitle">
+              ＼　私はこんな人です　／
+            </p>
+            <div class="about__introduction__text">
+              <ul>
+                <li>新しい出会いやご縁、人との繋がりは、私にとって大切なものです</li>
+                <li>自分の言動で誰かが喜んだり笑ったりすると嬉しいです</li>
+                <li>笑うと目がなくなります</li>
+                <li>ここ数年の座右の銘はNothing comes of nothing.（無から有は生まれない）</li>
+                <li>カナダで現地の人々や文化を知り、大好きになりました</li>
+              </ul>
+            </div>
+            <p class="about__introduction__subtitle">
+              ＼　こんなことやものが好きです　／
             </p>
             <div>
               <p class="about__introduction__text">
@@ -203,10 +252,10 @@
     </div>
   </section>
 
-  <section class="skills" id="skills">
+  <section class="skills">
     <div class="skewed-bg">
       <div class="ly-inner skewed-bg__children">
-        <h2 class="headding">Skills</h2>
+        <h2 class="headding" id="skills">Skills</h2>
         <div class="skills__wrapper">
           <div class="skills__skillbars">
             <div class="skillbar" data-percent="80">
@@ -245,7 +294,7 @@
                 とにかく導入してみよう！ということで、チュートリアルのみ学んだ後、Node.jsを使ったVScodeでの自動コンパイル設定を乗り越えて、やっと使い始めた所です。これから早くやりたいことは、パーツごとにファイルを切り分けてメンテナンス性をあげることです。
               </div>
             </div>
-            <div class="skillbar" data-percent="5">
+            <div class="skillbar" data-percent="10">
               <div class="skill-info">
                 <p class="skillbar-title">JavaScript</p>
                 <!-- <span class="skill-bar-percent"></p> -->
@@ -257,7 +306,7 @@
                 Progateで基本中の基本のみ学びましたが、普段は基本的に実装したい機能を調べる→コードを読んでそれぞれの行を理解する→次回につながるようにメモを残しながら実装する、というサイクルを繰り返しています。
               </div>
             </div>
-            <div class="skillbar" data-percent="5">
+            <div class="skillbar" data-percent="10">
               <div class="skill-info">
                 <p class="skillbar-title">jQuery</p>
                 <!-- <span class="skill-bar-percent"></p> -->
@@ -343,7 +392,7 @@
 
   <section class="works skewed-bg__white">
     <div class="ly-inner">
-      <h2 class="headding">Works</h2>
+      <h2 id="works" class="headding">Works</h2>
       <div class="works__wrapper">
         <div class="works__box"><a class="js-modal-open" href="" data-target="works__modal01"><img
               src="./img/works/top-image__mwam.jpg" alt=""></a></div>
@@ -479,8 +528,8 @@
       </div>
       <div class="works__modal__wrapper works__modal__2column">
         <div class="works__modal__item works__modal__2column works__modal__2column__item">
-          <img style="width: 70%;" src="./img/works/modal__quorea-pc.jpg" alt="採用特設ページのデザイン画面（PC版）">
-          <img style="width: 20%;" src="./img/works/modal__quorea-sp.jpg" alt="採用特設ページのデザイン画面（SP版）">
+          <img style="width: 70%;" src="./img/works/modal__quorea-pc.jpg" alt="金融系サービスLPのデザイン画面（PC版）">
+          <img style="width: 20%;" src="./img/works/modal__quorea-sp.jpg" alt="金融系サービスLPのデザイン画面（SP版）">
         </div>
         <div class="works__modal__description works__modal__2column__description">
           <span>
@@ -495,8 +544,9 @@
           <ul>
             <li>サービスを紹介するブロガー向けの「アフィリエイト紹介ページ」の作成</li>
             <li>ターゲット層：20〜40代男性、アフィリエイター</li>
-            <li>既存のサービス（https://quorea.jp/fx）と大きく乖離がない雰囲気</li>
-            <li>詳細はこちら</li>
+            <li>既存のサービス（<span style="display: inline-block;"><a href="https://quorea.jp/fx"
+                  target="_blank">https://quorea.jp/fx</a></span>）と大きく乖離がない雰囲気</li>
+            <li><span><a href="https://crowdworks.jp/public/jobs/5807570" target="_blank">依頼内容の詳細はこちら</a></span></li>
           </ul>
           <span>
             工夫した点
@@ -510,7 +560,7 @@
           <div class="works__modal__link-group">
             <a href="https://xd.adobe.com/view/5b6386a1-fc91-4ea5-b414-c2427917bf04-0e30/?fullscreen"
               target="_blank">デザインデモページ（PC版）はこちら</a><br>
-            <a href="https://xd.adobe.com/view/9f763749-51cf-431c-a016-b7598c0cf7c7-ca25/"
+            <a href="https://xd.adobe.com/view/9f763749-51cf-431c-a016-b7598c0cf7c7-ca25/?fullscreen&hints=off"
               target="_blank">デザインデモページ（SP版）はこちら</a>
           </div>
         </div>
@@ -533,15 +583,15 @@
       <div class="works__modal__wrapper">
         <div class="works__modal__item">
           <div class="works__modal__item-box">
-            <img style="width: 100%;" src="./img/works/modal__clothes-1200x628.jpg" alt="アーティストページのデザイン画面">
+            <img style="width: 100%;" src="./img/works/modal__clothes-1200x628.jpg" alt="子供服通販サイトへ誘導するバナー">
             <div>1200x628</div>
           </div>
           <div class="works__modal__item-box">
-            <img style="width: auto;" src="./img/works/modal__clothes-468x60.jpg" alt="アーティストページのデザイン画面">
+            <img style="width: auto;" src="./img/works/modal__clothes-468x60.jpg" alt="子供服通販サイトへ誘導するバナー">
             <div>468x60</div>
           </div>
           <div class="works__modal__item-box">
-            <img style="width: auto" src="./img/works/modal__clothes-336x280.jpg" alt="アーティストページのデザイン画面">
+            <img style="width: auto" src="./img/works/modal__clothes-336x280.jpg" alt="子供服通販サイトへ誘導するバナー">
             <div>336x280</div>
           </div>
         </div>
@@ -589,7 +639,7 @@
       <div class="works__modal__wrapper">
         <div class="works__modal__item">
           <div class="works__modal__item-box">
-            <img style="width: 100%;" src="./img/works/modal__furniture.jpg" alt="アーティストページのデザイン画面">
+            <img style="width: 100%;" src="./img/works/modal__furniture.jpg" alt="和風家具通販サイトへ誘導するバナー">
           </div>
         </div>
         <div class="works__modal__description">
@@ -620,7 +670,7 @@
       </div>
     </div>
   </div>
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="footer__wrapper ly-inner">
       <span class="footer__message" style="font-size: 50px;">
         Thank you for your time!
@@ -629,9 +679,10 @@
         I’m looking forward to seeing you soon :)
       </span>
       <div class="footer__icons">
-        <a href=""><i class="fab fa-twitter"></i></a>
-        <a href=""><i class="fab fa-github"></i></a>
-        <a href=""><i class="fas fa-envelope"></i></a>
+        <a href="https://twitter.com/yuuri_webDesign" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/yuuri-3" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdnCUigBvk4FH6p2RobrwnIzC3Y27S4Ijlnsh1odJje1CSIyg/viewform?usp=sf_link"
+          target="_blank"><i class="fas fa-envelope"></i></a>
       </div>
       ©Yuuri All Rights Reserved.
     </div>
@@ -651,7 +702,6 @@
   <!-- <script src="js/jquery-2.1.4.min.js"></script> -->
   <!-- ↑↑skillbarの公式ページが推奨してたVersion（別で自分で読み込んでたものでも動いたのでコメントアウトで保留） -->
   <script src="./js/skill.bars.jquery.js"></script>
-  <script src="./js/jquery.champagne.js"></script>
   <script src="./js/index.js"></script>
   <!-- JS, jQuery 関係の読み込み　↑ここまで -->
 </body>

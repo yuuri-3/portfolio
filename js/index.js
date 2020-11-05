@@ -121,30 +121,25 @@ document.addEventListener('DOMContentLoaded', function () {
     //   el: '.swiper-pagination',
     //   clickable: true,
     // },
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: true,
-    },
   };
   var mySwiper = new Swiper('.swiper-container', prams);
 
-  function slider(mql) {
-    if (mql.matches) {
-      prams.slidesPerGroup = 1;
-      prams.slidesPerView = 'auto';
-    } else {
-      prams.slidesPerGroup = 1;
-      prams.slidesPerView = 1;
-    }
-    mySwiper.destroy(true, true);
-    mySwiper = new Swiper('.swiper-container', prams);
-  }
+  // function slider(mql) {
+  //   if (mql.matches) {
+  //     prams.slidesPerGroup = 1;
+  //     prams.slidesPerView = 'auto';
+  //   } else {
+  //     prams.slidesPerGroup = 1;
+  //     prams.slidesPerView = 1;
+  //   }
+  //   mySwiper.destroy(true, true);
+  //   mySwiper = new Swiper('.swiper-container', prams);
+  // }
 
-  mql.addListener(slider);
-  slider(mql);
+  // mql.addListener(slider);
+  // slider(mql);
 });
 // ここまでSwiperの設定----------------------------------------------------------
-
 
 
 // ここからPersonalityのアイコンフェードイン----------------------------------------------------------
@@ -355,3 +350,31 @@ $(function () {
   });
 });
 // ここまでページ遷移時のフェードイン効果----------------------------------------------------------
+
+
+// ここからページ内リンクでグローバルナビにかからないように----------------------------------------------------------
+// $(function () {
+//   var headerHight = 30;
+//   $('a[href^="#"]').click(function () {
+//     var speed = 100;
+//     var href = $(this).attr("href");
+//     var target = $(href == "#" || href == "" ? 'html' : href);
+//     var position = target.offset().top - headerHight;
+//     $('body,html').animate({ scrollTop: position }, speed, 'swing');
+//     return false;
+//   });
+// });
+// ここからページ内リンクでグローバルナビにかからないように----------------------------------------------------------
+
+// var mql = window.matchMedia('screen and (min-width: 769px)');
+// function slider(mql) {
+//   if (mql.matches) {
+//     prams.slidesPerGroup = 1;
+//     prams.slidesPerView = 'auto';
+//   } else {
+//     prams.slidesPerGroup = 1;
+//     prams.slidesPerView = 1;
+//   }
+//   mySwiper.destroy(true, true);
+//   mySwiper = new Swiper('.swiper-container', prams);
+// }

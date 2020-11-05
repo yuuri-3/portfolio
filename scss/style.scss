@@ -15,13 +15,19 @@
   background: url('../img/bg.jpg') no-repeat left bottom;
   background-size: cover;
   color: #fff;
+
+
 }
 
 .header__site-logo {
-  width: 840px;
+  width: 70%;
   height: auto;
   margin: 350px 0 80px;
   filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, .16));
+
+  @include mq(pc) {
+    width: 840px;
+  }
 
   @include mq(sp) {
     margin-top: 300px;
@@ -43,7 +49,17 @@
 .headding {
   font-family: $cursiveFont;
   color: #9badc3;
-  font-size: 100px;
+  font-size: 70px;
+
+  @include mq(pc) {
+    font-size: 100px;
+  }
+
+  @include mq (sp) {
+    font-size: 40px;
+    margin-top: 50px;
+    text-align: center;
+  }
 }
 
 .sub-headding {
@@ -52,14 +68,25 @@
   &::after {
     content: '';
     display: block;
-    width: 345px;
     height: 2px;
     margin: 0px auto 10px;
+    width: 345px;
     background-color: $moduleColor;
+
+    @include mq(sp) {
+      width: 345px;
+    }
   }
 
   &__greeting {
     margin-bottom: 30px;
+
+    @include mq(sp) {
+      &::after {
+        width: 100px;
+        margin: 0 auto;
+      }
+    }
   }
 
   &__skills-webdesign {
@@ -183,6 +210,36 @@
   }
 }
 
+.greeting__message {
+
+  >span {
+    font-size: 13px;
+
+    @include mq(sp) {
+      font-size: 11px;
+    }
+  }
+}
+
+.greeting__pc-visible {
+  @include mq(sp) {
+    display: none;
+  }
+}
+
+.greeting__sp-visible {
+  display: none;
+
+  @include mq(sp) {
+    display: block;
+    text-align: left;
+
+    div {
+      text-align: center;
+      font-weight: 700;
+    }
+  }
+}
 
 .reason__body {
   background: url(../img/bg.jpg) no-repeat center;
@@ -305,7 +362,7 @@
 
 .reason__back {
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .about__wrapper {
@@ -316,22 +373,58 @@
   display: flex;
   justify-content: center;
   text-align: left;
+
+  @include mq(sp) {
+    display: block;
+  }
 }
 
 .about__picture {
   margin-right: 50px;
+
+  @include mq(sp) {
+    margin: 0;
+  }
 
   img {
     border-radius: 50%;
     width: 480px;
     height: auto;
     box-shadow: $boxShadow;
+
+    @include mq(sp) {
+      width: 100%;
+    }
   }
 }
 
 .about__introduction {
   margin-left: 50px;
+
+  @include mq(sp) {
+    margin: 0;
+  }
 }
+
+.about__introduction__pc-visible {
+  @include mq(sp) {
+    display: none;
+  }
+}
+
+.about__introduction__sp-visible {
+  display: none;
+
+  @include mq(sp) {
+    display: block;
+    margin-top: 40px;
+
+    .about__introduction__subtitle {
+      text-align: center;
+    }
+  }
+}
+
 
 .about__introduction__subtitle {
   line-height: 1.6;
@@ -479,7 +572,7 @@
       content: "\f138";
       position: absolute;
       left: 0;
-      color: #777;
+      color: $moduleColor;
       font-weight: 900;
     }
   }
@@ -525,85 +618,6 @@
     height: 100%;
   }
 }
-
-.footer {
-  text-align: center;
-  width: 100%;
-  background: url('../img/bg.jpg') no-repeat center;
-  background-size: cover;
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-  margin-top: 150px;
-  padding-bottom: 70px;
-
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: 0;
-  //   border-bottom: 5vw solid #999;
-  //   /* ちら見せ三角 高さを調節*/
-  //   border-left: 100vw solid transparent;
-  // }
-
-  // &::after {
-  //   content: '';
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: 0;
-  //   border-bottom: 10vw solid #fff;
-  //   /* 三角を白に */
-  //   border-right: 100vw solid transparent;
-  // }
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-top: 15vw solid #fff;
-    border-left: 100vw solid transparent;
-  }
-}
-
-.footer__wrapper {
-  padding-top: 330px;
-  line-height: 1.8;
-}
-
-.footer__triangle {
-  position: absolute;
-  border-top: 7.5vw solid transparent;
-  border-right: 50vw solid #9BADC3;
-  border-bottom: 7.6vw solid transparent;
-  top: 0px;
-  right: 0;
-  z-index: 1;
-}
-
-.footer__message {
-  display: block;
-  font-family: 'Kaushan Script', cursive;
-}
-
-.footer__icons {
-  margin-top: 200px;
-  margin-bottom: 30px;
-  font-size: 30px;
-
-
-  a {
-    margin-left: 15px;
-
-    &:nth-child(1) {
-      margin-left: 0;
-    }
-  }
-}
-
-
-
-
 
 .works__modal {
   display: none;
@@ -673,6 +687,16 @@
   margin: 50px auto 70px;
   padding: 0 20px;
 
+  a {
+    color: inherit;
+    transition: .3s;
+  }
+
+  a:hover {
+    color: $moduleColor;
+    transition: .3s;
+  }
+
   span {
     display: block;
     font-weight: 700;
@@ -721,4 +745,86 @@
 
 .works__modal__2column__description {
   margin: 0;
+}
+
+.footer {
+  text-align: center;
+  width: 100%;
+  background: url('../img/bg.jpg') no-repeat center;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin-top: 150px;
+  padding-bottom: 70px;
+
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   border-bottom: 5vw solid #999;
+  //   /* ちら見せ三角 高さを調節*/
+  //   border-left: 100vw solid transparent;
+  // }
+
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   border-bottom: 10vw solid #fff;
+  //   /* 三角を白に */
+  //   border-right: 100vw solid transparent;
+  // }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 15vw solid #fff;
+    border-left: 100vw solid transparent;
+  }
+}
+
+
+.footer__wrapper {
+  padding-top: 330px;
+  line-height: 1.8;
+}
+
+.footer__triangle {
+  position: absolute;
+  border-top: 7.5vw solid transparent;
+  border-right: 50vw solid #9BADC3;
+  border-bottom: 7.6vw solid transparent;
+  top: 0px;
+  right: 0;
+  z-index: 1;
+}
+
+.footer__message {
+  display: block;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.footer__icons {
+  margin-top: 200px;
+  margin-bottom: 30px;
+  font-size: 30px;
+
+
+  a {
+    margin-left: 15px;
+    transition: .3s;
+
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+
+    &:hover {
+      color: $moduleColor;
+      transition: .3s;
+    }
+  }
 }

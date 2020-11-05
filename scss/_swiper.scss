@@ -14,6 +14,11 @@
 .swiper-slide {
   width: 550px;
   height: 340px;
+
+  @include mq(sp) {
+    width: 250px;
+    height: 177px;
+  }
 }
 
 .carousel-image {
