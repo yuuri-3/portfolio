@@ -501,7 +501,6 @@ body.fadeout::after {
 @media screen and (max-width: 767px) {
   .headding {
     font-size: 40px;
-    margin-top: 50px;
     text-align: center;
   }
 }
@@ -798,6 +797,10 @@ body.fadeout::after {
   font-size: 30px;
 }
 
+.about .headding {
+  margin-top: 50px;
+}
+
 .about__wrapper {
   text-align: right;
 }
@@ -906,6 +909,12 @@ body.fadeout::after {
   text-align: left;
 }
 
+@media screen and (max-width: 767px) {
+  .personality .headding {
+    text-align: center;
+  }
+}
+
 .personality__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -926,6 +935,11 @@ body.fadeout::after {
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    margin: 0;
   }
 }
 
@@ -939,9 +953,9 @@ body.fadeout::after {
 
 @media screen and (max-width: 767px) {
   .personality__box {
-    width: 90%;
+    width: 100%;
     position: relative;
-    margin: 0 auto 50px;
+    margin: 0 auto;
   }
 }
 
@@ -964,10 +978,15 @@ body.fadeout::after {
 }
 
 @media screen and (max-width: 767px) {
+  .personality__icon img {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .personality__icon {
-    font-size: 4rem;
     padding: 23px;
-    margin-bottom: 25px;
+    margin-bottom: 0;
   }
 }
 
@@ -980,6 +999,12 @@ body.fadeout::after {
   margin-top: 120px;
 }
 
+@media screen and (max-width: 767px) {
+  .js-slide-first {
+    margin-top: 0;
+  }
+}
+
 .js-slide-second {
   opacity: 0;
   -webkit-transform: translate(0, 50px);
@@ -989,12 +1014,24 @@ body.fadeout::after {
   margin-top: 60px;
 }
 
+@media screen and (max-width: 767px) {
+  .js-slide-second {
+    margin-top: 40px;
+  }
+}
+
 .js-slide-third {
   opacity: 0;
   -webkit-transform: translate(0, 50px);
           transform: translate(0, 50px);
   -webkit-transition: all .7s .7s ease-out;
   transition: all .7s .7s ease-out;
+}
+
+@media screen and (max-width: 767px) {
+  .js-slide-third {
+    margin-top: 40px;
+  }
 }
 
 .personality__title {
