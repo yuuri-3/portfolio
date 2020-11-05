@@ -1158,6 +1158,12 @@ body.fadeout::after {
   text-align: left;
 }
 
+@media screen and (max-width: 767px) {
+  .works .headding {
+    text-align: center;
+  }
+}
+
 .works__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1173,6 +1179,13 @@ body.fadeout::after {
   width: 350px;
   height: 216px;
   margin: 20px 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .works__box {
+    width: 270px;
+    height: 167px;
+  }
 }
 
 .works__box a {
@@ -1356,6 +1369,13 @@ body.fadeout::after {
   padding-bottom: 70px;
 }
 
+@media screen and (max-width: 767px) {
+  .footer {
+    margin-top: 100px;
+    padding-bottom: 30px;
+  }
+}
+
 .footer::after {
   content: '';
   position: absolute;
@@ -1370,6 +1390,34 @@ body.fadeout::after {
   line-height: 1.8;
 }
 
+@media screen and (max-width: 767px) {
+  .footer__wrapper {
+    padding-top: 100px;
+  }
+}
+
+.footer__wrapper span {
+  display: block;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer__wrapper span {
+    font-size: 30px;
+  }
+}
+
+.footer__wrapper span:last-of-type {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer__wrapper span:last-of-type {
+    font-size: 15px;
+  }
+}
+
 .footer__triangle {
   position: absolute;
   border-top: 7.5vw solid transparent;
@@ -1380,15 +1428,16 @@ body.fadeout::after {
   z-index: 1;
 }
 
-.footer__message {
-  display: block;
-  font-family: 'Kaushan Script', cursive;
-}
-
 .footer__icons {
   margin-top: 200px;
   margin-bottom: 30px;
   font-size: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer__icons {
+    margin-top: 30px;
+  }
 }
 
 .footer__icons a {
