@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="fadeout">
 
   <!-- ↓ここから　ハンバーガーメニュー関連 -->
   <header class="header" id="js-hamburger__colorChange">
@@ -294,8 +294,6 @@
               </div>
             </div>
           </div>
-
-
           <div class="skills__description">
             <span class="sub-headding sub-headding__skills-webdesign">
               WEBデザインに関する軌跡
@@ -349,15 +347,15 @@
       <div class="works__wrapper">
         <div class="works__box"><a class="js-modal-open" href="" data-target="works__modal01"><img
               src="./img/works/top-image__mwam.jpg" alt=""></a></div>
-        <div class="works__box"><a class="js-modal-open" href="" data-target="works__modal01"><img
+        <div class="works__box"><a class="js-modal-open" href="" data-target="works__modal02"><img
               src="./img/works/top-image__recruiting.jpg" alt=""></a></div>
-        <div class="works__box"><a class="js-modal-open" href="" data-target="works__modal01"><img
+        <div class="works__box"><a class="js-modal-open" href="" data-target="works__modal03"><img
               src="./img/works/top-image__quorea.jpg" alt=""></a></div>
-        <div class="works__box"><a class="js-modal-open" href="" data-target="works__modal01"><img
+        <div class="works__box"><a class="js-modal-open" href="" data-target="works__modal04"><img
               src="./img/works/top-image__clothes.jpg" alt=""></a></div>
-        <div class="works__box"><a class="js-modal-open" href="" data-target="works__modal01"><img
+        <div class="works__box"><a class="js-modal-open" href="" data-target="works__modal05"><img
               src="./img/works/top-image__furniture.jpg" alt=""></a></div>
-        <div class="works__box"><a class="js-modal-open" href="" data-target="works__modal01"><img
+        <div class="works__box"><a class="js-modal-open" href="" data-target="works__modal06"><img
               src="./img/works/top-image__car.jpg" alt=""></div>
         </a>
       </div>
@@ -371,14 +369,18 @@
     <!-- ↑背景をクリックしてもモーダルが閉じるために必要なレイヤー -->
     <div class="works__modal__content">
       <!-- ↓この中がモーダルウィンドウで表示する内容 -->
+      <span class="works__modal__close">
+        <a class="js-modal-close" href=""><i class="fas fa-times"></i></a>
+      </span>
+      <div class="works__modal__category">
+        <span class="headding">WEB site</span><br>
+        <span class="sub-headding sub-headding__works-modal-mwam">
+          アーティスト公式サイトのリニューアル案
+        </span>
+      </div>
       <div class="works__modal__wrapper">
-        <div class="works__modal__category">
-          <span class="headding">WEB site</span>
-        </div>
+
         <div class="works__modal__item">
-          <span class="sub-headding sub-headding__works-modal-mwam">
-            アーティスト公式サイトのリニューアル案
-          </span>
 
           <img style="width: 100%;" src="./img/works/modal__mwam.png" alt="アーティストページのデザイン画面">
         </div>
@@ -386,55 +388,238 @@
           <span>
             リニューアルする目的のターゲット
           </span>
-          <p>
-            - まだアーティストを深く知らず、興味を持って訪問してくれたユーザー<br>
-            - アーティストのライブに参加するため、日程や開催地を調べにきたユーザー
-          </p>
-
-          <span style="
-          margin: 15px 0 40px;
-          text-align: center;
-      ">
-            <a href="https://www.mwamjapan.info/" target="_blank">公式サイトはこちら</a>
-          </span>
-
+          <ul>
+            <li>まだアーティストを深く知らず、興味を持って訪問してくれたユーザー</li>
+            <li>アーティストのライブに参加するため、日程や開催地を調べにきたユーザー</li>
+          </ul>
           <span>
             リニューアルに際して工夫した点
           </span>
-          <p>
-            - 最初のページで、各セクションの情報量を増やして、「今アツいのはコレ！」が複数伝わりやすいようにした<br>
-            - ライブスケジュールの部分でまず開催地のエリアが分かるように配置した<br>
-            - フッターの配置バランスを整えた<br>
-            - 本家サイトの雰囲気を損なわないように踏襲しながら、レイアウト等を整えた
-          </p>
-
-          <span style="margin-top: 30px;text-align: center;">
+          <ul>
+            <li>最初のページで、各セクションの情報量を増やして、「今アツいのはコレ！」が複数伝わりやすいようにした</li>
+            <li>ライブスケジュールの部分でまず開催地のエリアが分かるように配置した</li>
+            <li>フッターの配置バランスを整えた</li>
+            <li>本家サイトの雰囲気を損なわないように踏襲しながら、レイアウト等を整えた</li>
+          </ul>
+          <div class="works__modal__link-group">
+            <a href="https://www.mwamjapan.info/" target="_blank">公式サイトはこちら</a><br>
             <a href="https://xd.adobe.com/view/49632dda-7590-4326-af27-011b39bad06f-1c30/?fullscreen&hints=off"
               target="_blank">デザインデモページ（PC版）はこちら</a>
-          </span>
-          <span style="margin-bottom: 30px;text-align: center;">
+            <br>
             <a href="https://xd.adobe.com/view/ae0347c7-3c50-4066-b3a7-5b34e39a5ab5-fb50/?fullscreen&hints=off"
               target="_blank">デザインデモページ（SP版）はこちら</a>
-          </span>
-          <span style="text-align: center;font-size: 40px;">
-            <a class="js-modal-close" href=""><i class="fas fa-arrow-circle-left"></i></a>
-          </span>
+          </div>
         </div>
       </div>
-
-
     </div>
   </div>
+
   <div class="works__modal js-modal" id="works__modal02">
     <div class="works__modal__bg js-modal-close"></div>
     <div class="works__modal__content">
-      <p>2つ目モーダルウィンドウです。ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、 背景の黒い部分をクリックしても閉じることができます。</p>
-      <a class="js-modal-close" href="">閉じる</a>
+      <span class="works__modal__close">
+        <a class="js-modal-close" href=""><i class="fas fa-times"></i></a>
+      </span>
+      <div class="works__modal__category">
+        <span class="headding">WEB site</span><br>
+        <span class="sub-headding sub-headding__works-modal-recruiting">
+          中途採用の特設ページ/架空
+        </span>
+      </div>
+      <div class="works__modal__wrapper works__modal__2column">
+        <div class="works__modal__item works__modal__2column works__modal__2column__item">
+          <img style="width: 70%;" src="./img/works/modal__recruiting-pc.png" alt="採用特設ページのデザイン画面（PC版）">
+          <img style="width: 20%;" src="./img/works/modal__recruiting-sp.png" alt="採用特設ページのデザイン画面（SP版）">
+        </div>
+        <div class="works__modal__description works__modal__2column__description">
+          <span>
+            WEBサイトの目的
+          </span>
+          <ul>
+            <li>特設ページを通じて求人応募者数を増やす</li>
+            <li>転職に興味がないユーザーにも、会社の存在自体を知ってもらう</li>
+          </ul>
+          <span>
+            コンセプト
+          </span>
+          <ul>
+            <li>20代〜30代に向けた中途採用</li>
+            <li>向上心や自身のスキルアップに熱いというペルソナ設定でキャッチコピーとメインビューを設定</li>
+            <li>爽やかで思慮深く、情熱を持ちながらも落ち着いたイメージ</li>
+          </ul>
+          <span>
+            工夫した点
+          </span>
+          <ul>
+            <li>会社が流行に乗っている雰囲気を出すため、近年採用サイトでよく見受けられるブロークングリッドレイアウトを採用してダイナミックなデザインを目指した</li>
+            <li>どんな会社か知ってもらうためのコンテンツを盛り込んだ（会社としての求職者へのメッセージ、会社の紹介、実際に働いている人の体験談）</li>
+          </ul>
+          <div class="works__modal__link-group">
+            <a href="https://xd.adobe.com/view/7a08bcc1-d92b-406f-9c1a-8e778d792922-2f5b/?fullscreen&hints=off"
+              target="_blank">デザインデモページ（PC版）はこちら</a><br>
+            <a href="https://xd.adobe.com/view/6f2caafc-d80b-49eb-be8c-009a61bff0b4-3a7f/?fullscreen"
+              target="_blank">デザインデモページ（SP版）はこちら</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
+  <div class="works__modal js-modal" id="works__modal03">
+    <div class="works__modal__bg js-modal-close"></div>
+    <div class="works__modal__content">
+      <span class="works__modal__close">
+        <a class="js-modal-close" href=""><i class="fas fa-times"></i></a>
+      </span>
+      <div class="works__modal__category">
+        <span class="headding">WEB site</span><br>
+        <span class="sub-headding sub-headding__works-modal-quorea">
+          金融系サービスのLP
+        </span>
+      </div>
+      <div class="works__modal__wrapper works__modal__2column">
+        <div class="works__modal__item works__modal__2column works__modal__2column__item">
+          <img style="width: 70%;" src="./img/works/modal__quorea-pc.jpg" alt="採用特設ページのデザイン画面（PC版）">
+          <img style="width: 20%;" src="./img/works/modal__quorea-sp.jpg" alt="採用特設ページのデザイン画面（SP版）">
+        </div>
+        <div class="works__modal__description works__modal__2column__description">
+          <span>
+            題材
+          </span>
+          <ul>
+            <li>クラウドワークスでのLP制作依頼内容</li>
+          </ul>
+          <span>
+            依頼内容
+          </span>
+          <ul>
+            <li>サービスを紹介するブロガー向けの「アフィリエイト紹介ページ」の作成</li>
+            <li>ターゲット層：20〜40代男性、アフィリエイター</li>
+            <li>既存のサービス（https://quorea.jp/fx）と大きく乖離がない雰囲気</li>
+            <li>詳細はこちら</li>
+          </ul>
+          <span>
+            工夫した点
+          </span>
+          <ul>
+            <li>既存のサービスに関連したプログラムであると認識してもらうために、プロダクトのイメージをメインビューに設定した</li>
+            <li>グラデーションのカラーやヘディングの装飾、セクションをグレー背景で区切るなど既存サイトを踏襲した</li>
+            <li>いちばん大切な報酬システムについては、セクションの背景を変えて強調した</li>
+            <li>料金体系が複数に分かれていたので、テーブルにまとめて整理した</li>
+          </ul>
+          <div class="works__modal__link-group">
+            <a href="https://xd.adobe.com/view/5b6386a1-fc91-4ea5-b414-c2427917bf04-0e30/?fullscreen"
+              target="_blank">デザインデモページ（PC版）はこちら</a><br>
+            <a href="https://xd.adobe.com/view/9f763749-51cf-431c-a016-b7598c0cf7c7-ca25/"
+              target="_blank">デザインデモページ（SP版）はこちら</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="works__modal js-modal" id="works__modal04">
+    <div class="works__modal__bg js-modal-close"></div>
+    <div class="works__modal__content">
+      <span class="works__modal__close">
+        <a class="js-modal-close" href=""><i class="fas fa-times"></i></a>
+      </span>
+      <div class="works__modal__category">
+        <span class="headding">Banner</span><br>
+        <span class="sub-headding sub-headding__works-modal-clothes">
+          子供服通販サイトへ誘導するバナー
+        </span>
+      </div>
+      <div class="works__modal__wrapper">
+        <div class="works__modal__item">
+          <div class="works__modal__item-box">
+            <img style="width: 100%;" src="./img/works/modal__clothes-1200x628.jpg" alt="アーティストページのデザイン画面">
+            <div>1200x628</div>
+          </div>
+          <div class="works__modal__item-box">
+            <img style="width: auto;" src="./img/works/modal__clothes-468x60.jpg" alt="アーティストページのデザイン画面">
+            <div>468x60</div>
+          </div>
+          <div class="works__modal__item-box">
+            <img style="width: auto" src="./img/works/modal__clothes-336x280.jpg" alt="アーティストページのデザイン画面">
+            <div>336x280</div>
+          </div>
+        </div>
+        <div class="works__modal__description">
+          <span>
+            ターゲット
+          </span>
+          <ul>
+            <li>おしゃれが好きで、子供にも良い服を着せたいと思っているご両親</li>
+          </ul>
+          <span>
+            コンセプト
+          </span>
+          <ul>
+            <li>あくまでも主役は子供だが、ご両親がわくわくしながら子供に着せる服を選べるというイメージに訴求しようと心掛けた</li>
+          </ul>
+          <span>
+            工夫した点
+          </span>
+          <ul>
+            <li>サイトの雰囲気と乖離がないように全体的にシンプルにまとめた</li>
+            <li>二人の写真を組み込んで、男の子・女の子、どちらの親御さんでも自分の子供にイメージが重ねやすいようにした</li>
+          </ul>
+          <div class="works__modal__link-group">
+            <a href="https://wonder-ap.com/" target="_blank">誘導先サイトはこちら</a><br>
+            <a href="https://crowdworks.jp/public/jobs/5838341" target="_blank">題材にしたクラウドワークス案件はこちら</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="works__modal js-modal" id="works__modal05">
+    <div class="works__modal__bg js-modal-close"></div>
+    <div class="works__modal__content">
+      <span class="works__modal__close">
+        <a class="js-modal-close" href=""><i class="fas fa-times"></i></a>
+      </span>
+      <div class="works__modal__category">
+        <span class="headding">Banner</span><br>
+        <span class="sub-headding sub-headding__works-modal-furniture">
+          和風家具通販サイトへ誘導するバナー
+        </span>
+      </div>
+      <div class="works__modal__wrapper">
+        <div class="works__modal__item">
+          <div class="works__modal__item-box">
+            <img style="width: 100%;" src="./img/works/modal__furniture.jpg" alt="アーティストページのデザイン画面">
+          </div>
+        </div>
+        <div class="works__modal__description">
+          <span>
+            ターゲット
+          </span>
+          <ul>
+            <li>和食系の飲食店経営者</li>
+          </ul>
+          <span>
+            コンセプト
+          </span>
+          <ul>
+            <li>一見で和風の飲食店に関係のある広告だと認識してもらい、興味を引けるようにイメージを心掛けた</li>
+          </ul>
+          <span>
+            工夫した点
+          </span>
+          <ul>
+            <li>和風飲食店で使用できる家具がある、と伝えるために座敷の写真を使用</li>
+            <li>少ない写真と文字で、引き締まった（まとまった）デザインに仕上げたかったため、あしらいを使用</li>
+          </ul>
+          <div class="works__modal__link-group">
+            <a href="https://www.resolab.shop/" target="_blank">誘導先サイトはこちら</a><br>
+            <a href="https://crowdworks.jp/public/jobs/5831171" target="_blank">題材にしたクラウドワークス案件はこちら</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <footer class="footer">
     <div class="footer__wrapper ly-inner">
       <span class="footer__message" style="font-size: 50px;">
