@@ -123,21 +123,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // },
   };
   var mySwiper = new Swiper('.swiper-container', prams);
-
-  // function slider(mql) {
-  //   if (mql.matches) {
-  //     prams.slidesPerGroup = 1;
-  //     prams.slidesPerView = 'auto';
-  //   } else {
-  //     prams.slidesPerGroup = 1;
-  //     prams.slidesPerView = 1;
-  //   }
-  //   mySwiper.destroy(true, true);
-  //   mySwiper = new Swiper('.swiper-container', prams);
-  // }
-
-  // mql.addListener(slider);
-  // slider(mql);
 });
 // ここまでSwiperの設定----------------------------------------------------------
 

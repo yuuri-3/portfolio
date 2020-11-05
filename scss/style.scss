@@ -37,7 +37,7 @@
 
 .ly-inner {
   text-align: center;
-  width: 80%;
+  width: 85%;
   margin-left: auto;
   margin-right: auto;
 
@@ -92,20 +92,32 @@
     &::after {
       width: 180px;
       margin: 0;
+
+      @include mq(sp) {
+        width: 160px;
+      }
     }
   }
 
   &__skills-coding {
     &::after {
-      width: 180px;
+      width: 155px;
       margin: 0;
+
+      @include mq(sp) {
+        width: 160px;
+      }
     }
   }
 
   &__skills-wannado {
     &::after {
-      width: 220px;
+      width: 195px;
       margin: 0;
+
+      @include mq(sp) {
+        width: 190px;
+      }
     }
   }
 
@@ -385,17 +397,26 @@
 }
 
 .about__picture {
-  margin-right: 50px;
+  width: 30%;
+
+  @include mq(pc) {
+    margin-right: 50px;
+    width: auto;
+  }
 
   @include mq(sp) {
-    margin: 0;
+    width: 100%;
   }
 
   img {
     border-radius: 50%;
-    width: 480px;
+    width: 100%;
     height: auto;
     box-shadow: $boxShadow;
+
+    @include mq(pc) {
+      width: 480px;
+    }
 
     @include mq(sp) {
       width: 100%;
@@ -405,9 +426,11 @@
 
 .about__introduction {
   margin-left: 50px;
+  width: 70%;
 
   @include mq(sp) {
     margin: 0;
+    width: 100%;
   }
 }
 
@@ -478,7 +501,6 @@
   display: flex;
   justify-content: space-around;
   max-width: 1200px;
-  width: 90%;
   margin: -30px auto 0;
 
   @include mq(sp) {
@@ -566,10 +588,18 @@
 }
 
 .skills {
-  // margin-top: -50px;
-
   .headding {
     text-align: right;
+    margin-top: 20px;
+
+    @include mq(pc) {
+      margin-top: 0;
+    }
+
+    @include mq(sp) {
+      text-align: center;
+      margin-top: 50px;
+    }
   }
 }
 
@@ -578,10 +608,17 @@
   display: flex;
   justify-content: center;
 
+  @include mq(sp) {
+    flex-direction: column;
+
+  }
+
   ul {
     margin-bottom: 30px;
   }
 }
+
+
 
 .skills__list {
   ul {
@@ -589,6 +626,10 @@
     position: relative;
     margin-top: 25px;
     text-align: left;
+
+    @include mq(sp) {
+      margin-top: 10px;
+    }
 
     li {
       list-style: none;
