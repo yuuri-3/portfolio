@@ -77,6 +77,7 @@ function hiddenScrollButton() {
   }
 }
 window.addEventListener('scroll', hiddenScrollButton);
+
 // ここまでスクロールボタンのフェードイン・フェードイン----------------------------------------------------------
 
 
@@ -108,7 +109,6 @@ window.addEventListener('scroll', fixedGlobalNav);
 // ここからSwiperの設定----------------------------------------------------------
 
 document.addEventListener('DOMContentLoaded', function () {
-  var mql = window.matchMedia('screen and (min-width: 769px)');
   var prams = {
     loop: false,
     speed: 1200,

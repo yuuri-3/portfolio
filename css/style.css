@@ -210,6 +210,21 @@ body.fadeout::after {
   }
 }
 
+.header__scrolldown-button {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header__scrolldown__fadeout {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header__scrolldown__fadein {
+  opacity: 1;
+  visibility: visible;
+}
+
 .reason__arrow {
   position: relative;
 }

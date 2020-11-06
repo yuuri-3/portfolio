@@ -38,7 +38,19 @@
 // rotateYは垂直軸を中心に要素を回転させる
 // rotateZは平面で（Z軸中心に）時計回りに回転させる
 
+.header__scrolldown-button {
+  transition: all 0.5s;
+}
 
+.header__scrolldown__fadeout {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header__scrolldown__fadein {
+  opacity: 1;
+  visibility: visible;
+}
 
 
 
