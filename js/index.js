@@ -164,120 +164,6 @@ $(window).on('load scroll', function () {
     }
   });
 });
-// $(window).on('load scroll', function () {
-//   if ($('.skillbar-2').hasClass("js-processed")) return;
-//   // スクロールするたびにスクロールイベントが発火して数字が動いてしまうので、
-//   // 一度実行したあとに「js-processedというclass名を追加
-//   // →　js-processedというclass名がある場合は実行しないと最初に宣言することで繰り返し発火を防ぐ
-//   $(".skillbar-2").each(function () {
-//     var winScroll = $(window).scrollTop();
-//     var winHeight = $(window).height();
-//     var scrollPos = winScroll + (winHeight * 0.8);
-//     if ($(this).offset().top < scrollPos) {
-//       $('.skillbar-2').skillBars({
-//         from: 0,
-//         speed: 2700,
-//         interval: 100,
-//       });
-//       $('.skillbar-2').addClass('js-processed');
-//     }
-//   });
-// });
-// $(window).on('load scroll', function () {
-//   if ($('.skillbar-3').hasClass("js-processed")) return;
-//   // スクロールするたびにスクロールイベントが発火して数字が動いてしまうので、
-//   // 一度実行したあとに「js-processedというclass名を追加
-//   // →　js-processedというclass名がある場合は実行しないと最初に宣言することで繰り返し発火を防ぐ
-//   $(".skillbar-3").each(function () {
-//     var winScroll = $(window).scrollTop();
-//     var winHeight = $(window).height();
-//     var scrollPos = winScroll + (winHeight * 0.8);
-//     if ($(this).offset().top < scrollPos) {
-//       $('.skillbar-3').skillBars({
-//         from: 0,
-//         speed: 2700,
-//         interval: 100,
-//       });
-//       $('.skillbar-3').addClass('js-processed');
-//     }
-//   });
-// });
-// $(window).on('load scroll', function () {
-//   if ($('.skillbar-4').hasClass("js-processed")) return;
-//   // スクロールするたびにスクロールイベントが発火して数字が動いてしまうので、
-//   // 一度実行したあとに「js-processedというclass名を追加
-//   // →　js-processedというclass名がある場合は実行しないと最初に宣言することで繰り返し発火を防ぐ
-//   $(".skillbar-4").each(function () {
-//     var winScroll = $(window).scrollTop();
-//     var winHeight = $(window).height();
-//     var scrollPos = winScroll + (winHeight * 0.8);
-//     if ($(this).offset().top < scrollPos) {
-//       $('.skillbar-4').skillBars({
-//         from: 0,
-//         speed: 2700,
-//         interval: 100,
-//       });
-//       $('.skillbar-4').addClass('js-processed');
-//     }
-//   });
-// });
-// $(window).on('load scroll', function () {
-//   if ($('.skillbar-5').hasClass("js-processed")) return;
-//   // スクロールするたびにスクロールイベントが発火して数字が動いてしまうので、
-//   // 一度実行したあとに「js-processedというclass名を追加
-//   // →　js-processedというclass名がある場合は実行しないと最初に宣言することで繰り返し発火を防ぐ
-//   $(".skillbar-5").each(function () {
-//     var winScroll = $(window).scrollTop();
-//     var winHeight = $(window).height();
-//     var scrollPos = winScroll + (winHeight * 0.8);
-//     if ($(this).offset().top < scrollPos) {
-//       $('.skillbar-5').skillBars({
-//         from: 0,
-//         speed: 2700,
-//         interval: 100,
-//       });
-//       $('.skillbar-5').addClass('js-processed');
-//     }
-//   });
-// });
-// $(window).on('load scroll', function () {
-//   if ($('.skillbar-6').hasClass("js-processed")) return;
-//   // スクロールするたびにスクロールイベントが発火して数字が動いてしまうので、
-//   // 一度実行したあとに「js-processedというclass名を追加
-//   // →　js-processedというclass名がある場合は実行しないと最初に宣言することで繰り返し発火を防ぐ
-//   $(".skillbar-6").each(function () {
-//     var winScroll = $(window).scrollTop();
-//     var winHeight = $(window).height();
-//     var scrollPos = winScroll + (winHeight * 0.8);
-//     if ($(this).offset().top < scrollPos) {
-//       $('.skillbar-6').skillBars({
-//         from: 0,
-//         speed: 2700,
-//         interval: 100,
-//       });
-//       $('.skillbar-6').addClass('js-processed');
-//     }
-//   });
-// });
-// $(window).on('load scroll', function () {
-//   if ($('.skillbar-7').hasClass("js-processed")) return;
-//   // スクロールするたびにスクロールイベントが発火して数字が動いてしまうので、
-//   // 一度実行したあとに「js-processedというclass名を追加
-//   // →　js-processedというclass名がある場合は実行しないと最初に宣言することで繰り返し発火を防ぐ
-//   $(".skillbar-7").each(function () {
-//     var winScroll = $(window).scrollTop();
-//     var winHeight = $(window).height();
-//     var scrollPos = winScroll + (winHeight * 0.8);
-//     if ($(this).offset().top < scrollPos) {
-//       $('.skillbar-7').skillBars({
-//         from: 0,
-//         speed: 2700,
-//         interval: 100,
-//       });
-//       $('.skillbar-7').addClass('js-processed');
-//     }
-//   });
-// });
 
 // ここまでスキルバー----------------------------------------------------------
 
@@ -338,6 +224,7 @@ $(function () {
 
 
 // ここからページ内リンクでグローバルナビにかからないように----------------------------------------------------------
+
 // $(function () {
 //   var headerHight = 30;
 //   $('a[href^="#"]').click(function () {
@@ -349,17 +236,8 @@ $(function () {
 //     return false;
 //   });
 // });
-// ここからページ内リンクでグローバルナビにかからないように----------------------------------------------------------
 
-// var mql = window.matchMedia('screen and (min-width: 769px)');
-// function slider(mql) {
-//   if (mql.matches) {
-//     prams.slidesPerGroup = 1;
-//     prams.slidesPerView = 'auto';
-//   } else {
-//     prams.slidesPerGroup = 1;
-//     prams.slidesPerView = 1;
-//   }
-//   mySwiper.destroy(true, true);
-//   mySwiper = new Swiper('.swiper-container', prams);
-// }
+// ここからページ内リンクでグローバルナビにかからないように----------------------------------------------------------
+// ↓
+// ハンバーガーメニューが作動しなくなるので対応が必要
+

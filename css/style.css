@@ -156,15 +156,13 @@ body.fadeout::after {
 
 .header__scrolldown-button {
   position: absolute;
-  bottom: 90px;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  bottom: 60px;
   z-index: 2;
   display: inline-block;
   text-decoration: none;
   padding-top: 60px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 .header__scrolldown-button span {
@@ -180,12 +178,6 @@ body.fadeout::after {
           transform: rotate(-45deg);
   -webkit-animation: sdb 2s infinite;
           animation: sdb 2s infinite;
-}
-
-@media screen and (max-width: 767px) {
-  .header__scrolldown-button {
-    bottom: 60px;
-  }
 }
 
 @-webkit-keyframes sdb {
@@ -218,16 +210,6 @@ body.fadeout::after {
   }
 }
 
-.header__scrolldown__fadeout {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.header__scrolldown__fadein {
-  opacity: 1;
-  visibility: visible;
-}
-
 .reason__arrow {
   position: relative;
 }
@@ -235,17 +217,35 @@ body.fadeout::after {
 .reason__arrow span {
   position: absolute;
   left: 50%;
-  -webkit-transform: translateX(-50%) rotate(-45deg);
-          transform: translateX(-50%) rotate(-45deg);
+  -webkit-transform: translate(-50%, 0) rotate(-45deg);
+          transform: translate(-50%, 0) rotate(-45deg);
   width: 24px;
   height: 24px;
   border-left: 1px solid #333;
   border-bottom: 1px solid #333;
-  -webkit-animation: sdb 1.7s infinite;
-          animation: sdb 1.7s infinite;
+  -webkit-animation: reason__sdb 1.7s infinite;
+          animation: reason__sdb 1.7s infinite;
 }
 
-@keyframes sdb {
+@-webkit-keyframes reason__sdb {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(0) rotateZ(-45deg);
+            transform: translateX(-50%) translateY(0) rotateZ(-45deg);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateX(-50%) translateY(-10px) rotateZ(-45deg);
+            transform: translateX(-50%) translateY(-10px) rotateZ(-45deg);
+    opacity: 0.1;
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(0) rotateZ(-45deg);
+            transform: translateX(-50%) translateY(0) rotateZ(-45deg);
+    opacity: 1;
+  }
+}
+
+@keyframes reason__sdb {
   0% {
     -webkit-transform: translateX(-50%) translateY(0) rotateZ(-45deg);
             transform: translateX(-50%) translateY(0) rotateZ(-45deg);
