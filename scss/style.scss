@@ -126,6 +126,11 @@
       width: 280px;
       margin: 0 auto;
       margin-bottom: 50px;
+
+      @include mq(sp) {
+        width: 245px;
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -133,6 +138,11 @@
     &::after {
       width: 185px;
       margin-bottom: 50px;
+
+      @include mq(sp) {
+        width: 160px;
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -140,6 +150,11 @@
     &::after {
       width: 140px;
       margin-bottom: 50px;
+
+      @include mq(sp) {
+        width: 120px;
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -147,6 +162,11 @@
     &::after {
       width: 240px;
       margin-bottom: 50px;
+
+      @include mq(sp) {
+        width: 215px;
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -154,6 +174,11 @@
     &::after {
       width: 250px;
       margin-bottom: 50px;
+
+      @include mq(sp) {
+        width: 220px;
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -703,7 +728,7 @@
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 2000;
   overflow-y: scroll;
 }
 
@@ -724,6 +749,11 @@
   width: 75%;
   margin: 50px 0;
   line-height: 1.8;
+
+  @include mq(sp) {
+    width: 85%;
+    padding: 30px 0 50px;
+  }
 }
 
 .works__modal__category {
@@ -738,6 +768,10 @@
 
 .works__modal__wrapper {
   padding: 0 30px 30px;
+
+  @include mq(sp) {
+    padding: 0 30px;
+  }
 }
 
 .works__modal__close {
@@ -753,10 +787,36 @@
   margin: 0 auto;
   width: 80%;
   text-align: center;
+
+  @include mq(sp) {
+    width: 100%;
+  }
 }
 
 .works__modal__item-box {
   margin-bottom: 30px;
+}
+
+.works__banner__clothes- {
+  &big {
+    width: 100%;
+  }
+
+  &middle {
+    width: auto;
+
+    @include mq(sp) {
+      width: 100%;
+    }
+  }
+
+  &small {
+    width: auto;
+
+    @include mq(sp) {
+      width: 100%;
+    }
+  }
 }
 
 .works__modal__description {
@@ -764,9 +824,20 @@
   margin: 50px auto 70px;
   padding: 0 20px;
 
+  @include mq(sp) {
+    width: 100%;
+    padding: 0;
+    margin: 50px auto 0;
+  }
+
   a {
     color: inherit;
     transition: .3s;
+
+    @include mq(sp) {
+      margin-bottom: 20px;
+      display: inline-block;
+    }
   }
 
   a:hover {
@@ -784,6 +855,10 @@
     position: relative;
     margin-bottom: 50px;
     text-align: left;
+
+    @include mq(sp) {
+      margin-bottom: 30px;
+    }
 
     li {
       list-style: none;
@@ -809,11 +884,20 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+
+  @include mq(sp) {
+    flex-direction: column;
+  }
 }
 
 .works__modal__2column__item {
   margin: 0 10px;
   justify-content: space-around;
+
+  @include mq(sp) {
+    flex-direction: row;
+    margin: 0 0 40px;
+  }
 
   img {
     border: 1px solid #f1f1f1;
