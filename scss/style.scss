@@ -247,6 +247,8 @@
   }
 }
 
+
+
 .greeting__message {
 
   >span {
@@ -279,9 +281,9 @@
 }
 
 .reason__body {
-  background: url(../img/bg.jpg) no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
+  // background: url(../img/bg.jpg) no-repeat center;
+  // background-size: cover;
+  // background-attachment: fixed;
 }
 
 
@@ -289,20 +291,21 @@
   width: 70%;
   padding: 0 110px 50px;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, .5);
   position: relative;
+  z-index: 100;
 
   @include mq(pc) {
     width: 1100px;
   }
 
+  @include mq(sp) {
+    padding: 0;
+    width: 80%;
+  }
+
   span {
     display: block;
     font-weight: 700;
-  }
-
-  .headding {
-    color: #fff;
   }
 }
 
@@ -343,6 +346,12 @@
       font-weight: bold;
       font-size: 15px;
 
+      @include mq(sp) {
+        margin-left: 25px;
+        padding-left: 3px;
+        font-size: 12px;
+      }
+
       &:before {
         counter-increment: list;
         content: counter(list);
@@ -355,6 +364,13 @@
         color: #fff;
         line-height: 30px;
         z-index: 1;
+
+        @include mq(sp) {
+          left: -25px;
+          width: 15px;
+          height: 15px;
+          line-height: 26px;
+        }
       }
 
       &:after {
@@ -366,11 +382,14 @@
         height: 25px;
         background: $moduleColor;
         color: #fff;
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
         transform: rotate(45deg);
+
+        @include mq(sp) {
+          top: 6px;
+          left: -25px;
+          width: 15px;
+          height: 15px;
+        }
       }
     }
   }
@@ -392,6 +411,10 @@
   font-size: 27px;
   font-weight: 700;
 
+  @include mq(sp) {
+    font-size: 18px;
+  }
+
   span {
     color: $moduleColor;
   }
@@ -400,6 +423,13 @@
 .reason__back {
   text-align: center;
   font-size: 30px;
+
+  @include mq(sp) {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
 }
 
 .about {

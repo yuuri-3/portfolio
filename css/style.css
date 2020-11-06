@@ -235,32 +235,30 @@ body.fadeout::after {
 .reason__arrow span {
   position: absolute;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  -webkit-transform: translateX(-50%) rotate(-45deg);
+          transform: translateX(-50%) rotate(-45deg);
   width: 24px;
   height: 24px;
   border-left: 1px solid #333;
   border-bottom: 1px solid #333;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
   -webkit-animation: sdb 1.7s infinite;
           animation: sdb 1.7s infinite;
 }
 
 @keyframes sdb {
   0% {
-    -webkit-transform: rotateZ(-45deg) translate(0, 0);
-            transform: rotateZ(-45deg) translate(0, 0);
+    -webkit-transform: translateX(-50%) translateY(0) rotateZ(-45deg);
+            transform: translateX(-50%) translateY(0) rotateZ(-45deg);
     opacity: 1;
   }
   50% {
-    -webkit-transform: rotateZ(-45deg) translate(-10px, 10px);
-            transform: rotateZ(-45deg) translate(-10px, 10px);
+    -webkit-transform: translateX(-50%) translateY(-10px) rotateZ(-45deg);
+            transform: translateX(-50%) translateY(-10px) rotateZ(-45deg);
     opacity: 0.1;
   }
   100% {
-    -webkit-transform: rotateZ(-45deg) translate(0, 0);
-            transform: rotateZ(-45deg) translate(0, 0);
+    -webkit-transform: translateX(-50%) translateY(0) rotateZ(-45deg);
+            transform: translateX(-50%) translateY(0) rotateZ(-45deg);
     opacity: 1;
   }
 }
@@ -318,6 +316,7 @@ body.fadeout::after {
   margin: 0 13px;
   -webkit-transition: all .3s;
   transition: all .3s;
+  color: #333;
 }
 
 .header__global-nav.is-fixed-nav li:hover {
@@ -358,6 +357,36 @@ body.fadeout::after {
   content: '';
   position: absolute;
   top: 0vw;
+  left: 0;
+  border-bottom: 15vw solid #fff;
+  border-left: 100vw solid transparent;
+}
+
+.reason__skewed-bg {
+  position: relative;
+  overflow: hidden;
+  background-color: #f5e7ee;
+}
+
+.reason__skewed-bg::before {
+  content: '';
+  position: fixed;
+  left: 0;
+  border-top: 15vw solid #fff;
+  border-right: 100vw solid transparent;
+}
+
+.reason__skewed-bg__white {
+  position: relative;
+  overflow: hidden;
+  padding-top: 15vw;
+  margin-top: -15vw;
+}
+
+.reason__skewed-bg__white::before {
+  content: '';
+  position: fixed;
+  bottom: 0;
   left: 0;
   border-bottom: 15vw solid #fff;
   border-left: 100vw solid transparent;
@@ -740,18 +769,12 @@ body.fadeout::after {
   }
 }
 
-.reason__body {
-  background: url(../img/bg.jpg) no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
 .reason__wrapper {
   width: 70%;
   padding: 0 110px 50px;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.5);
   position: relative;
+  z-index: 100;
 }
 
 @media screen and (min-width: 1200px) {
@@ -760,13 +783,16 @@ body.fadeout::after {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .reason__wrapper {
+    padding: 0;
+    width: 80%;
+  }
+}
+
 .reason__wrapper span {
   display: block;
   font-weight: 700;
-}
-
-.reason__wrapper .headding {
-  color: #fff;
 }
 
 .reason__globalnav {
@@ -812,6 +838,14 @@ body.fadeout::after {
   font-size: 15px;
 }
 
+@media screen and (max-width: 767px) {
+  .reason__list ol li {
+    margin-left: 25px;
+    padding-left: 3px;
+    font-size: 12px;
+  }
+}
+
 .reason__list ol li:before {
   counter-increment: list;
   content: counter(list);
@@ -826,6 +860,15 @@ body.fadeout::after {
   z-index: 1;
 }
 
+@media screen and (max-width: 767px) {
+  .reason__list ol li:before {
+    left: -25px;
+    width: 15px;
+    height: 15px;
+    line-height: 26px;
+  }
+}
+
 .reason__list ol li:after {
   content: "";
   position: absolute;
@@ -836,7 +879,16 @@ body.fadeout::after {
   background: #ca8cdc;
   color: #fff;
   -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+@media screen and (max-width: 767px) {
+  .reason__list ol li:after {
+    top: 6px;
+    left: -25px;
+    width: 15px;
+    height: 15px;
+  }
 }
 
 .reason__ly-space-bottom__large {
@@ -854,6 +906,12 @@ body.fadeout::after {
   font-weight: 700;
 }
 
+@media screen and (max-width: 767px) {
+  .reason__conclusion {
+    font-size: 18px;
+  }
+}
+
 .reason__conclusion span {
   color: #ca8cdc;
 }
@@ -861,6 +919,16 @@ body.fadeout::after {
 .reason__back {
   text-align: center;
   font-size: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .reason__back {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+  }
 }
 
 .about .headding {
