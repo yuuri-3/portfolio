@@ -195,10 +195,12 @@
     margin-top: 20px;
   }
 
-  &__button {
-    margin-top: 50px;
 
-    button {
+  &__button {
+    a {
+      margin-top: 50px;
+
+      display: inline-block;
       appearance: none;
       border-radius: 50px;
       font-family: inherit;
@@ -207,11 +209,7 @@
       color: #fff;
       position: relative;
       z-index: 0;
-
-      a {
-        display: inline-block;
-        padding: 15px 40px;
-      }
+      padding: 15px 40px;
 
       &:before {
         content: "";
