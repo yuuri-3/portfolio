@@ -670,9 +670,13 @@ body.fadeout::after {
   transition: 1s;
   font-weight: 700;
   color: #fff;
-  padding: 15px 40px;
   position: relative;
   z-index: 0;
+}
+
+.greeting__button button a {
+  display: inline-block;
+  padding: 15px 40px;
 }
 
 .greeting__button button:before {
