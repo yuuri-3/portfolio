@@ -210,6 +210,7 @@ $(function () {
   // ハッシュリンク(#)と別ウィンドウでページを開く場合はスルー
   $('a:not([href^="#"]):not([target])').on('click', function (e) {
     e.preventDefault(); // ナビゲートをキャンセル
+
     url = $(this).attr('href'); // 遷移先のURLを取得
     if (url !== '') {
       $('body').addClass('fadeout');  // bodyに class="fadeout"を挿入
@@ -225,19 +226,24 @@ $(function () {
 
 // ここからページ内リンクでグローバルナビにかからないように----------------------------------------------------------
 
-// $(function () {
-//   var headerHight = 30;
-//   $('a[href^="#"]').click(function () {
-//     var speed = 100;
-//     var href = $(this).attr("href");
-//     var target = $(href == "#" || href == "" ? 'html' : href);
-//     var position = target.offset().top - headerHight;
-//     $('body,html').animate({ scrollTop: position }, speed, 'swing');
-//     return false;
-//   });
-// });
+$(function () {
+  var headerHight = 30;
+  $('a[href^="#"]').click(function () {
+    var speed = 100;
+    var href = $(this).attr("href");
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top - headerHight;
+    $('body,html').animate({ scrollTop: position }, speed, 'swing');
+    // return false;
+  });
+});
 
 // ここからページ内リンクでグローバルナビにかからないように----------------------------------------------------------
 // ↓
 // ハンバーガーメニューが作動しなくなるので対応が必要
 
+
+// レスポンシブ対応用↓
+// if (window.matchMedia("(min-width:767px)").matches) {
+//   // windowサイズを変更して、767px以上になったら行うイベント
+// }
