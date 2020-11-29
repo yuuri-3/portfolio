@@ -13,6 +13,17 @@
   <!-- Google fonts, Swiperのライブラリ, Fontawesomeの読み込み　↑ここまで -->
   <link rel="stylesheet" href="css/destyle.css">
   <link rel="stylesheet" href="css/style.css">
+  <!-- AdobeFont使用のスクリプト -->
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'ctc4kqx',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
 </head>
 
 <body class="pf_body">
@@ -24,7 +35,70 @@
   </div>
 
   <div class="pf_wrapper pf_skewed-bg">
+    <div class="pf_description">
+      <!-- <div class="pf_button">
+        <a href="#">リニューアルのきっかけ ▼</a>
+      </div> -->
+      <h2 class="pf_title">
+        リニューアルのきっかけ
+      </h2>
+      <div class="pf_description_text">
+        <p>
+          - テンプレート使ってるみたい<br>
+          - 誰にでも作れそう<br>
+          - どういう人なのか全然伝わってこない
+        </p>
 
+        <p>という指摘を受けて、「誰にでも作れそうには見えないポートフォリオってどんなのだ？？」と考え直すきっかけになりました。
+        </p>
+
+        <p>
+          <span style="color: #AF0000;">そもそもこのポートフォリオサイトは何のために作るのか？</span><br>
+          採用担当の人に、私に興味を持ってもらうこと<br>
+          <span style="color: #AF0000;">では採用担当の人にどうやって興味持ってもらうのか？</span><br>
+          「自分の会社にマッチする人柄なのか、具体的にいまどんなことを知っていて何ができるのか」が明確にイメージできれは、話してみるかどうかの判断がしやすい
+        </p>
+
+        <p>
+          ということを考えて、<br>
+          - 人柄視点<br>
+          - Webデザインのスキル視点<br>
+          という2項目に分けて自分のことをもっと表現しよう！と方針を決めました。
+        </p>
+      </div>
+    </div>
+    <div class="beforeafter_wrapper">
+      <div class="before_wrapper">
+        <h2 class="pf_heading">
+          Before
+        </h2>
+        <div class="pf_info">
+          2020年9月下旬<br>
+          ポートフォリオ完成（期間：約1ヶ月）
+        </div>
+        <div class="before_images">
+          <div class="image-box">
+            <img class="pf_img_pc" src="./img/works/ss_portfolio_old.png" alt="スクショPC版（初回）">
+            <img class="pf_img_sp" src="./img/works/ss_portfolio_sp_old.png" alt="スクショSP版（初回）">
+          </div>
+        </div>
+      </div>
+      <div class="after_wrapper">
+        <h2 class="pf_heading color_emphasis">
+          After
+        </h2>
+        <div class="pf_info">
+          2020年11月上旬<br>
+          リニューアル（期間：1週間）
+        </div>
+        <div class="after-images">
+          <div class="image-box">
+            <img class="pf_img_pc" src="./img/works/ss_portfolio_new.png" alt="スクショPC版（新版）">
+            <img class="pf_img_sp" src="./img/works/ss_portfolio_sp_new.png" alt="スクショSP版（新版）">
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- JS, jQuery 関係の読み込み　↓ここから -->
