@@ -502,6 +502,53 @@ body.fadeout::after {
   }
 }
 
+.pf_body {
+  position: relative;
+}
+
+.bg_txt {
+  font-family: "Kaushan Script", cursive;
+  color: #F5E7EE;
+  font-size: calc(18px + 29vw);
+  margin-top: -32vw;
+  -webkit-transform: translate(-7%, 0);
+          transform: translate(-7%, 0);
+  margin-bottom: -5vw;
+}
+
+.mock {
+  text-align: center;
+  position: absolute;
+  top: 45vw;
+  width: 100%;
+}
+
+.mock img {
+  width: 50%;
+}
+
+.pf_wrapper {
+  background-color: #EFEFEF;
+  position: relative;
+}
+
+.pf_skewed-bg {
+  position: relative;
+  overflow: hidden;
+  padding-top: 15vw;
+  margin-top: -15vw;
+  z-index: -1;
+}
+
+.pf_skewed-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 10vw solid #fff;
+  border-right: 100vw solid transparent;
+}
+
 .header {
   text-align: center;
   width: 100%;
