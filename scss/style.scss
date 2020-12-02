@@ -248,7 +248,6 @@
         left: 0;
         top: 0;
         background: linear-gradient(to right, #9890FF, #FF8DCC);
-        box-shadow: $boxShadow;
       }
 
       &:hover:before {
@@ -1083,7 +1082,6 @@
       left: 0;
       top: 0;
       background: linear-gradient(to right, #9890FF, #FF8DCC);
-      box-shadow: $boxShadow;
     }
 
     &:hover:before {
