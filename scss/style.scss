@@ -464,6 +464,8 @@
 
 .about__picture {
   width: 30%;
+  transform: translateX(-100vw) rotate(0deg);
+  transition: all 1.5s;
 
   @include mq(pc) {
     margin-right: 50px;

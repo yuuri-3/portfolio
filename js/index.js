@@ -141,6 +141,16 @@ $(window).on('load scroll', function () {
 });
 // ここまでPersonalityのアイコンフェードイン----------------------------------------------------------
 
+$(window).on('load scroll', function () {
+  $(".about__picture").each(function () {
+    var winScroll = $(window).scrollTop();
+    var winHeight = $(window).height();
+    var scrollPos = winScroll + (winHeight * 0.8);
+    if ($(this).offset().top < scrollPos) {
+      $(this).css({ transform: 'translateX(0) rotateZ(360deg)' });
+    }
+  });
+});
 
 
 // ここからスキルバー----------------------------------------------------------

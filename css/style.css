@@ -1171,6 +1171,10 @@ body.fadeout::after {
 
 .about__picture {
   width: 30%;
+  -webkit-transform: translateX(-100vw) rotate(0deg);
+          transform: translateX(-100vw) rotate(0deg);
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
 }
 
 @media screen and (min-width: 1200px) {
