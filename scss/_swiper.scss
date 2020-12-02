@@ -1,5 +1,9 @@
 .swiper-wrapper {
   margin-top: 20px;
+
+  &:hover {
+    cursor: url(../img/drag_cursor.cur), default;
+  }
 }
 
 .swiper-custom-parent {
@@ -18,6 +22,8 @@
 .swiper-slide {
   width: 550px;
   height: 340px;
+
+
 
   @include mq(sp) {
     width: 250px;

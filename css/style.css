@@ -411,6 +411,10 @@ body.fadeout::after {
   margin-top: 20px;
 }
 
+.swiper-wrapper:hover {
+  cursor: url(../img/drag_cursor.cur), default;
+}
+
 .swiper-custom-parent {
   margin-left: auto;
   position: relative;
