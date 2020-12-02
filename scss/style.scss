@@ -181,6 +181,18 @@
     }
   }
 
+  &__works-modal-textCount {
+    &::after {
+      width: 150px;
+      margin-bottom: 50px;
+
+      @include mq(sp) {
+        width: 220px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
 }
 
 .greeting {
@@ -799,6 +811,7 @@
 
 .works__modal__wrapper {
   padding: 0 30px 30px;
+  text-align: center;
 
   @include mq(sp) {
     padding: 0 30px;
@@ -851,7 +864,7 @@
 }
 
 .works__modal__description {
-  width: 75%;
+  display: inline-block;
   margin: 50px auto 70px;
   padding: 0 20px;
 
@@ -879,6 +892,8 @@
   span {
     display: block;
     font-weight: 700;
+    text-align: left;
+    margin-bottom: 20px;
   }
 
   ul {

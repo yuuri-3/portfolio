@@ -869,6 +869,18 @@ body.fadeout::after {
   }
 }
 
+.sub-headding__works-modal-textCount::after {
+  width: 150px;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .sub-headding__works-modal-textCount::after {
+    width: 220px;
+    margin-bottom: 30px;
+  }
+}
+
 .greeting {
   margin-top: 40px;
 }
@@ -1566,6 +1578,7 @@ body.fadeout::after {
 
 .works__modal__wrapper {
   padding: 0 30px 30px;
+  text-align: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -1624,7 +1637,7 @@ body.fadeout::after {
 }
 
 .works__modal__description {
-  width: 75%;
+  display: inline-block;
   margin: 50px auto 70px;
   padding: 0 20px;
 }
@@ -1659,6 +1672,8 @@ body.fadeout::after {
 .works__modal__description span {
   display: block;
   font-weight: 700;
+  text-align: left;
+  margin-bottom: 20px;
 }
 
 .works__modal__description ul {
