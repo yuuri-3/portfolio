@@ -529,7 +529,6 @@
 .about__introduction__text {
   margin-bottom: 50px;
 
-
   // listのデコレーションをfontawesomeフォントでメープルに変更
   ul {
     padding-left: 1.5em;
@@ -552,6 +551,15 @@
   }
 
   // listのデコレーションをfontawesomeフォントでメープルに変更
+
+  span {
+    display: inline-block;
+    background-color: #ff8fc385;
+    border-radius: 50px;
+    padding: 0 10px;
+    font-size: 13px;
+    font-weight: 700;
+  }
 }
 
 .personality {

@@ -1260,6 +1260,15 @@ body.fadeout::after {
   font-weight: 900;
 }
 
+.about__introduction__text span {
+  display: inline-block;
+  background-color: #ff8fc385;
+  border-radius: 50px;
+  padding: 0 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
 .personality .headding {
   text-align: left;
 }
